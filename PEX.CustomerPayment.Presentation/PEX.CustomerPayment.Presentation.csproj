@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16EE88D6-7F56-481F-A61C-C7842F5AA761}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PEX.CustomerPayment.Presentation</RootNamespace>
+    <AssemblyName>PEX.CustomerPayment.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44373</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=6.4.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.6.4.1\lib\net461\EntityFramework6.Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="HelperKit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=9bfe7e6f875104a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelperKit.1.1.0\lib\net47\HelperKit.dll</HintPath>
+    </Reference>
+    <Reference Include="HelperKit.Mvc, Version=1.1.3.3, Culture=neutral, PublicKeyToken=9bfe7e6f875104a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelperKit.Mvc.1.1.3.3\lib\net47\HelperKit.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="HelperKit.Web, Version=1.1.0.0, Culture=neutral, PublicKeyToken=9bfe7e6f875104a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelperKit.Web.1.1.0\lib\net47\HelperKit.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.3\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.3\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.3\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.3\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\accontrol.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\activoc.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\activod.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\acumulado.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\adelanto.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\adenda.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\adipersonal.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agenage.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agenban.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agencia.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agenmovim.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agenoper.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agenopera.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\agentesglobo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\asignacion.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\banco.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\bcocomi.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\bcocuenta.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\bcomovim.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\bcooperac.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\bcorefer.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\caja.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cajacierre.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cajamovimc.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cajamovimd.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cajaoper.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cajasaldo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cajavario.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\calendario.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cambiocorr.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cargamg.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cargo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cartera.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\catalogo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\centro.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cheque.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cierre.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ciiu.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ciudade.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\clas.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\clave.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cliente.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\clientex.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\comisagen.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\comproban.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\concepto.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\concluido.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\conpago.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\consueldo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\contablec.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\contabled.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\contrato.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\corresponsale.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\credito.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ct.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cuarta.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\cuenta.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\denuncia.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\departa.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\destino.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\destinosd.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\distrito.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\documento.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\dolare.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\domingo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\empleadore.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\envio.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\errore.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\factura.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\familiar.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\fcoperac.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\fedex.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\formacion.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\gananper.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\GirosModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GirosModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\GirosModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\GirosModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GirosModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\girosnac.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\gratifica.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\grupos.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\guinazu.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\horario.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ingreper.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\institucione.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\interage.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\intermex.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\intermovim.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\interoperac.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\intertran.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\inusual.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\juridico.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\kardex.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\laboral.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\liquida.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\liquidacione.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\localidade.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\logclien.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\logpago.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\log_triggers.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\lotescon.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\marcacion.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\mbocupa.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\mbsubagen.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\mbubigeo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\mgcomi.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\mgram.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\moneda.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\moneye.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\nacional.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\objeto.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\obligado.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ocupa.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ofac.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\opcione.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\operaact.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\orbi.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\pago.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\pais.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\paisesmg.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\patrim.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\perfile.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\periodo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\permiso.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\persocaja.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\persodia.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\personal.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\PexModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PexModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\PexModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PexModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\PexModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PexModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\postal.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\prestamo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\presupuesto.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\provision.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\queja.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\reclamo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\reclamonu.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\reclamoti.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\reclaopenu.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\reclaopera.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\remunera.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\remunerad.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\resuman.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\riafex.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\riesgo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ro.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\rorope.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\rubro.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\seccione.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\servicio.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\sole.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\sospecha.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\sospechan.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\sunat.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tablasr.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tablast.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tarifa.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tarifasnac.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tercero.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ticambio.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ticambio1.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ticambioage.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ticheque.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ticlave.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tipago.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\tipocom.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\titan.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\titanlog.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\totalagen.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\totalme.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\transaccione.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\travel.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\travelsal.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\trf.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\ubigeo.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\unica.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\usuario.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\usuavar.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\utilidad.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\utilidade.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\vacacione.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\valormn.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\viamerica.cs">
+      <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ConsultaReferenciaViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\payyed\css\stylesheet.css" />
+    <Content Include="Content\payyed\images\anyone-affiliate-marketing.jpg" />
+    <Content Include="Content\payyed\images\anyone-freelancer.jpg" />
+    <Content Include="Content\payyed\images\anyone-online-sellers.jpg" />
+    <Content Include="Content\payyed\images\anyone-online-shopping.jpg" />
+    <Content Include="Content\payyed\images\app-mobile.png" />
+    <Content Include="Content\payyed\images\app-store.png" />
+    <Content Include="Content\payyed\images\bg\image-1.jpg" />
+    <Content Include="Content\payyed\images\bg\image-2.jpg" />
+    <Content Include="Content\payyed\images\bg\image-3.jpg" />
+    <Content Include="Content\payyed\images\bg\image-4.jpg" />
+    <Content Include="Content\payyed\images\bg\image-5.jpg" />
+    <Content Include="Content\payyed\images\bg\image-6.jpg" />
+    <Content Include="Content\payyed\images\favicon.png" />
+    <Content Include="Content\payyed\images\google-play-store.png" />
+    <Content Include="Content\payyed\images\how-work.jpg" />
+    <Content Include="Content\payyed\images\logo-light.png" />
+    <Content Include="Content\payyed\images\logo.png" />
+    <Content Include="Content\payyed\images\our-values-mission.jpg" />
+    <Content Include="Content\payyed\images\our-values-vision.jpg" />
+    <Content Include="Content\payyed\images\partner\partner-1.png" />
+    <Content Include="Content\payyed\images\partner\partner-10.png" />
+    <Content Include="Content\payyed\images\partner\partner-11.png" />
+    <Content Include="Content\payyed\images\partner\partner-2.png" />
+    <Content Include="Content\payyed\images\partner\partner-3.png" />
+    <Content Include="Content\payyed\images\partner\partner-4.png" />
+    <Content Include="Content\payyed\images\partner\partner-5.png" />
+    <Content Include="Content\payyed\images\partner\partner-6.png" />
+    <Content Include="Content\payyed\images\partner\partner-7.png" />
+    <Content Include="Content\payyed\images\partner\partner-8.png" />
+    <Content Include="Content\payyed\images\partner\partner-9.png" />
+    <Content Include="Content\payyed\images\payment\mastercard.png" />
+    <Content Include="Content\payyed\images\payment\visa.png" />
+    <Content Include="Content\payyed\images\profile-thumb.jpg" />
+    <Content Include="Content\payyed\images\request-money.png" />
+    <Content Include="Content\payyed\images\team\leader-2.jpg" />
+    <Content Include="Content\payyed\images\team\leader-3.jpg" />
+    <Content Include="Content\payyed\images\team\leader-4.jpg" />
+    <Content Include="Content\payyed\images\team\leader.jpg" />
+    <Content Include="Content\payyed\images\who-we-are.jpg" />
+    <Content Include="Content\payyed\js\theme.js" />
+    <Content Include="Content\payyed\vendor\bootstrap-select\css\bootstrap-select.css" />
+    <Content Include="Content\payyed\vendor\bootstrap-select\css\bootstrap-select.min.css" />
+    <Content Include="Content\payyed\vendor\bootstrap-select\js\bootstrap-select.min.js" />
+    <Content Include="Content\payyed\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\payyed\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\payyed\vendor\currency-flags\css\currency-flags.min.css" />
+    <Content Include="Content\payyed\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Content\payyed\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Content\payyed\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Content\payyed\vendor\easy-responsive-tabs\easy-responsive-tabs.js" />
+    <Content Include="Content\payyed\vendor\font-awesome\css\all.min.css" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\payyed\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\payyed\vendor\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\payyed\vendor\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="Content\payyed\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Database\GirosModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GirosModel.edmx</DependentUpon>
+      <LastGenOutput>GirosModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Database\GirosModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GirosModel.edmx</DependentUpon>
+      <LastGenOutput>GirosModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Database\PexModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PexModel.Context.cs</LastGenOutput>
+      <DependentUpon>PexModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Database\PexModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PexModel.edmx</DependentUpon>
+      <LastGenOutput>PexModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Database\PexModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PexModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Database\PexModel.edmx.diagram">
+      <DependentUpon>PexModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Database\GirosModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GirosModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Database\GirosModel.edmx.diagram">
+      <DependentUpon>GirosModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900d41d.eot" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\shared\bit-filter.min.js" />
+    <Content Include="Scripts\shared\global.min.js" />
+    <Content Include="Scripts\shared\rebind.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_ModalTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\_Layout.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TextArea.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\SelectList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ReadOnly.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Password.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Int32.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\FileInput.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Email.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Decimal.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Boolean.cshtml" />
+    <Content Include="Views\Error\_Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60328</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44373/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

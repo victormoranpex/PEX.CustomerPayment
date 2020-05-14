@@ -1,0 +1,35 @@
+﻿@model PEX.CustomerPayment.Presentation.ViewModels.ConsultaReferenciaViewModel
+
+@{
+    ViewBag.Title = "Solicitud Pago Moneygram";
+}
+
+<div class="container">
+    <h2 class="font-weight-400 text-center mt-3">Solicitud Pago Moneygram</h2>
+    <p class="text-4 text-center mb-4">Ingrese los datos solicitados para realizar una solicitud de Pago Moneygram</p>
+    <div class="row">
+        <div class="col-md-8 col-lg-6 col-xl-5 mx-auto">
+            <div class="bg-light shadow-sm rounded p-3 p-sm-4 mb-4">
+                <h3 class="text-5 font-weight-400 mb-3">Datos de la transacción</h3>
+                <!-- Send Money Form
+                ============================================= -->
+                <form id="form-send-money" method="post">
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => Model.NumeroReferencia)
+                        @Html.TextBoxFor(x => Model.NumeroReferencia, new { @class = "form-control", placeholder = "Número de referencia de 8 dígitos" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => Model.NumeroDocumento)
+                        @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", placeholder = "Número de documento de identidad" })
+                    </div>
+                    <button class="btn btn-primary btn-block">Continuar <i class="fa fa-arrow-right"></i></button>
+                </form>
+                <!-- Send Money Form end -->
+            </div>
+        </div>
+    </div>
+</div>
