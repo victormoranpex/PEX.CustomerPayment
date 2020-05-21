@@ -5,332 +5,332 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6f0a375a60784773b1a5da36d1d2f7bf" Name="Diagram1">
-        <EntityTypeShape EntityType="girospruebasModel.accontrol" Width="1.5" PointX="3" PointY="108.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.activoc" Width="1.5" PointX="5.25" PointY="188.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.activod" Width="1.5" PointX="5.25" PointY="227.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.acumulado" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.adelanto" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.adenda" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.adipersonal" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agenage" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agenban" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agencia" Width="1.5" PointX="3" PointY="148.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agenmovim" Width="1.5" PointX="3" PointY="95" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agenoper" Width="1.5" PointX="3" PointY="100.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agenopera" Width="1.5" PointX="3" PointY="104.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.agentesglobo" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.asignacion" Width="1.5" PointX="3" PointY="165.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.banco" Width="1.5" PointX="6" PointY="193.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.bcocomi" Width="1.5" PointX="8.25" PointY="226.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.bcocuenta" Width="1.5" PointX="8.25" PointY="231.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.bcomovim" Width="1.5" PointX="5.25" PointY="207.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.bcooperac" Width="1.5" PointX="3" PointY="189.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.bcorefer" Width="1.5" PointX="3" PointY="196.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cajacierre" Width="1.5" PointX="5.25" PointY="198.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cajamovimc" Width="1.5" PointX="5.25" PointY="175.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cajamovimd" Width="1.5" PointX="5.25" PointY="240.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cajaoper" Width="1.5" PointX="3" PointY="175.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.caja" Width="1.5" PointX="3" PointY="205.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cajasaldo" Width="1.5" PointX="8.25" PointY="240.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cajavario" Width="1.5" PointX="3" PointY="216.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.calendario" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cambiocorr" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cargamg" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cargo" Width="1.5" PointX="3" PointY="213" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cartera" Width="1.5" PointX="8" PointY="182.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.catalogo" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.centro" Width="1.5" PointX="16.5" PointY="205.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cheque" Width="1.5" PointX="11.25" PointY="220.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cierre" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ciiu" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ciudade" Width="1.5" PointX="3" PointY="184.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.clas" Width="1.5" PointX="3" PointY="228.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.clave" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cliente" Width="1.5" PointX="8.25" PointY="191.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.clientex" Width="1.5" PointX="3" PointY="233" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.comisagen" Width="1.5" PointX="5.25" PointY="169.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.comproban" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.concepto" Width="1.5" PointX="2.75" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.concluido" Width="1.5" PointX="13.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.conpago" Width="1.5" PointX="3" PointY="237.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.consueldo" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.contablec" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.contabled" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.contrato" Width="1.5" PointX="13.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.corresponsale" Width="1.5" PointX="13.25" PointY="183.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.credito" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ct" Width="1.5" PointX="10.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cuarta" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.cuenta" Width="1.5" PointX="3" PointY="240.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.denuncia" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.departa" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.destino" Width="1.5" PointX="16.5" PointY="188" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.destinosd" Width="1.5" PointX="18.75" PointY="188.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.distrito" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.documento" Width="1.5" PointX="3" PointY="243.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.dolare" Width="1.5" PointX="18.75" PointY="192.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.domingo" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.empleadore" Width="1.5" PointX="15.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.envio" Width="1.5" PointX="13.5" PointY="190.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.errore" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.factura" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.familiar" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.fcoperac" Width="1.5" PointX="12.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.fedex" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.formacion" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.gananper" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.girosnac" Width="1.5" PointX="6.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.gratifica" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.grupos" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.guinazu" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.horario" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ingreper" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.institucione" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.interage" Width="1.5" PointX="22.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.intermex" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.intermovim" Width="1.5" PointX="3" PointY="247.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.interoperac" Width="1.5" PointX="3" PointY="252.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.intertran" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.inusual" Width="1.5" PointX="8.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.juridico" Width="1.5" PointX="10.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.kardex" Width="1.5" PointX="11.25" PointY="232.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.laboral" Width="1.5" PointX="12.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.liquida" Width="1.5" PointX="14.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.liquidacione" Width="1.5" PointX="21.75" PointY="199.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.localidade" Width="1.5" PointX="21.75" PointY="189.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.logclien" Width="1.5" PointX="16.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.logpago" Width="1.5" PointX="18.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.lotescon" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.marcacion" Width="1.5" PointX="3" PointY="259.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.mbocupa" Width="1.5" PointX="3" PointY="256.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.mbsubagen" Width="1.5" PointX="3" PointY="267.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.mbubigeo" Width="1.5" PointX="3" PointY="270.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.mgcomi" Width="1.5" PointX="3" PointY="282.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.mgram" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.moneda" Width="1.5" PointX="3" PointY="273.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.moneye" Width="1.5" PointX="2.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.nacional" Width="1.5" PointX="8.25" PointY="211.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.objeto" Width="1.5" PointX="3" PointY="279.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.obligado" Width="1.5" PointX="24.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ocupa" Width="1.5" PointX="3" PointY="302.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ofac" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.opcione" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.operaact" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.orbi" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.pago" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.pais" Width="1.5" PointX="0.75" PointY="178.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.paisesmg" Width="1.5" PointX="20.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.patrim" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.perfile" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.periodo" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.permiso" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.persocaja" Width="1.5" PointX="26.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.persodia" Width="1.5" PointX="26.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.personal" Width="1.5" PointX="11" PointY="186" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.postal" Width="1.5" PointX="6" PointY="202.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.prestamo" Width="1.5" PointX="26.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.presupuesto" Width="1.5" PointX="26.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.provision" Width="1.5" PointX="14.75" PointY="27.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.queja" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.reclamonu" Width="1.5" PointX="3" PointY="317.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.reclamo" Width="1.5" PointX="28.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.reclamoti" Width="1.5" PointX="3" PointY="320.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.reclaopenu" Width="1.5" PointX="3" PointY="323.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.reclaopera" Width="1.5" PointX="3" PointY="326.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.remunera" Width="1.5" PointX="16.75" PointY="28.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.remunerad" Width="1.5" PointX="18.75" PointY="28.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.resuman" Width="1.5" PointX="28.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.riafex" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.riesgo" Width="1.5" PointX="28.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.rorope" Width="1.5" PointX="3" PointY="329.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ro" Width="1.5" PointX="10.75" PointY="29.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.rubro" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.seccione" Width="1.5" PointX="8.75" PointY="179.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.servicio" Width="1.5" PointX="30.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.sole" Width="1.5" PointX="30.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.sospechan" Width="1.5" PointX="30.75" PointY="23.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.sospecha" Width="1.5" PointX="26.75" PointY="30.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.sunat" Width="1.5" PointX="0.75" PointY="31.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tablasr" Width="1.5" PointX="2.75" PointY="31.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tablast" Width="1.5" PointX="4.75" PointY="31.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tarifa" Width="1.5" PointX="6.75" PointY="31.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tarifasnac" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tercero" Width="1.5" PointX="32.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ticambio" Width="1.5" PointX="32.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ticambioage" Width="1.5" PointX="32.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ticambio1" Width="1.5" PointX="32.75" PointY="17.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ticheque" Width="1.5" PointX="16.5" PointY="198" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ticlave" Width="1.5" PointX="3" PointY="336.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tipago" Width="1.5" PointX="32.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.tipocom" Width="1.5" PointX="3" PointY="339.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.titan" Width="1.5" PointX="32.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.titanlog" Width="1.5" PointX="28.75" PointY="32.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.totalagen" Width="1.5" PointX="32.75" PointY="29.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.totalme" Width="1.5" PointX="30.75" PointY="33.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.transaccione" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.travel" Width="1.5" PointX="32.75" PointY="33.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.travelsal" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.trf" Width="1.5" PointX="3" PointY="342.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.ubigeo" Width="1.5" PointX="2.75" PointY="34.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.unica" Width="1.5" PointX="34.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.usuario" Width="1.5" PointX="0.75" PointY="183.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.usuavar" Width="1.5" PointX="34.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.utilidad" Width="1.5" PointX="12.75" PointY="34.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.utilidade" Width="1.5" PointX="34.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.vacacione" Width="1.5" PointX="18.75" PointY="34.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.valormn" Width="1.5" PointX="20.75" PointY="34.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.viamerica" Width="1.5" PointX="34.75" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="girospruebasModel.log_triggers" Width="1.5" PointX="34.75" PointY="30.75" IsExpanded="true" />
-        <AssociationConnector Association="girospruebasModel.usuariofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.agenciafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.clasefk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cuentafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.entidadfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.agenciafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.agenciafk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.agenciafk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.agenciafk4" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.agenciafk5" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odagenciafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odagenciafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk51" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk52" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk50" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usariofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bancofk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bancofk4" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bancofk5" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bcointermlfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.ciudadfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.paisfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bancofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.comisionfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk4" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.autoriza1fk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.autoriza2fk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.autoriza3fk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.autoriza4fk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.autoriza5fk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bancofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bcocuentafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cuentafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cuentaprofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odcuentafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odcuentafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk5" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.autorizafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.bancofk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odcajafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odcentrofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odvariosfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.operacionfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk6" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk7" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk8" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk9" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odcajafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odcentrofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.odclientefk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.operacionfk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk10" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk4" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk4" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk5" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk6" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk7" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk8" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk9" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.cajafk10" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tracajafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tracajafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk11" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk5" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.codigofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.codigofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk41" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk12" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.centrofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.centrofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.ciudadfk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.corresponsalfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.prefijadofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk13" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk6" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tipofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk14" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuarioinfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.ciudadfk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.ciudadfk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.ciudadfk4" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.paisfk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk15" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk16" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.clientefk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.nacionfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.postalfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tipoctafk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tipodocfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk17" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk48" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk18" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.conceptosfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk33" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.corresponsalfk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk19" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tipoctafk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk20" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.destinofk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.destinofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.destinofk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk21" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk22" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.tipofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk23" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuarioinfk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.localidadfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.paisfk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk24" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk45" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk44" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk7" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk25" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuarioinfk2" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk26" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk27" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usariofk1" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk37" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk35" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk36" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk28" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.monedafk8" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk29" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk30" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuarioinfk3" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk31" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk32" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.perfilfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.transaccfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.seccionfk" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk40" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk47" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk39" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk46" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk38" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk49" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk43" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk34" ManuallyRouted="false" />
-        <AssociationConnector Association="girospruebasModel.usuariofk42" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="girospruebasModel.accontrol" Width="1.5" PointX="3" PointY="309.25" />
+        <EntityTypeShape EntityType="girospruebasModel.activoc" Width="1.5" PointX="8.25" PointY="137.25" />
+        <EntityTypeShape EntityType="girospruebasModel.activod" Width="1.5" PointX="10.5" PointY="240.25" />
+        <EntityTypeShape EntityType="girospruebasModel.acumulado" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.adelanto" Width="1.5" PointX="7.75" PointY="8.75" />
+        <EntityTypeShape EntityType="girospruebasModel.adenda" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.adipersonal" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="girospruebasModel.agenage" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="girospruebasModel.agenban" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="girospruebasModel.agencia" Width="1.5" PointX="3" PointY="148.625" />
+        <EntityTypeShape EntityType="girospruebasModel.agenmovim" Width="1.5" PointX="3" PointY="211.25" />
+        <EntityTypeShape EntityType="girospruebasModel.agenoper" Width="1.5" PointX="3" PointY="90.25" />
+        <EntityTypeShape EntityType="girospruebasModel.agenopera" Width="1.5" PointX="3" PointY="134.125" />
+        <EntityTypeShape EntityType="girospruebasModel.agentesglobo" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="girospruebasModel.asignacion" Width="1.5" PointX="3" PointY="173" />
+        <EntityTypeShape EntityType="girospruebasModel.banco" Width="1.5" PointX="5.25" PointY="189.25" />
+        <EntityTypeShape EntityType="girospruebasModel.bcocomi" Width="1.5" PointX="5.25" PointY="202.25" />
+        <EntityTypeShape EntityType="girospruebasModel.bcocuenta" Width="1.5" PointX="8.25" PointY="226.5" />
+        <EntityTypeShape EntityType="girospruebasModel.bcomovim" Width="1.5" PointX="5.25" PointY="209.75" />
+        <EntityTypeShape EntityType="girospruebasModel.bcooperac" Width="1.5" PointX="3" PointY="127.375" />
+        <EntityTypeShape EntityType="girospruebasModel.bcorefer" Width="1.5" PointX="3" PointY="276.625" />
+        <EntityTypeShape EntityType="girospruebasModel.cajacierre" Width="1.5" PointX="5.25" PointY="242.25" />
+        <EntityTypeShape EntityType="girospruebasModel.cajamovimc" Width="1.5" PointX="7.5" PointY="215.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cajamovimd" Width="1.5" PointX="5.25" PointY="259.25" />
+        <EntityTypeShape EntityType="girospruebasModel.cajaoper" Width="1.5" PointX="5.25" PointY="194.25" />
+        <EntityTypeShape EntityType="girospruebasModel.caja" Width="1.5" PointX="3" PointY="297" />
+        <EntityTypeShape EntityType="girospruebasModel.cajasaldo" Width="1.5" PointX="8.25" PointY="258.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cajavario" Width="1.5" PointX="3" PointY="201.75" />
+        <EntityTypeShape EntityType="girospruebasModel.calendario" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cambiocorr" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cargamg" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cargo" Width="1.5" PointX="3" PointY="107.875" />
+        <EntityTypeShape EntityType="girospruebasModel.cartera" Width="1.5" PointX="3" PointY="180.5" />
+        <EntityTypeShape EntityType="girospruebasModel.catalogo" Width="1.5" PointX="11.75" PointY="6.75" />
+        <EntityTypeShape EntityType="girospruebasModel.centro" Width="1.5" PointX="10.5" PointY="201.25" />
+        <EntityTypeShape EntityType="girospruebasModel.cheque" Width="1.5" PointX="8.25" PointY="235.875" />
+        <EntityTypeShape EntityType="girospruebasModel.cierre" Width="1.5" PointX="9.75" PointY="11.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ciiu" Width="1.5" PointX="11.75" PointY="10.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ciudade" Width="1.5" PointX="3" PointY="189.25" />
+        <EntityTypeShape EntityType="girospruebasModel.clas" Width="1.5" PointX="3" PointY="120.125" />
+        <EntityTypeShape EntityType="girospruebasModel.clave" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cliente" Width="1.5" PointX="5.25" PointY="137.125" />
+        <EntityTypeShape EntityType="girospruebasModel.clientex" Width="1.5" PointX="3" PointY="304.75" />
+        <EntityTypeShape EntityType="girospruebasModel.comisagen" Width="1.5" PointX="5.25" PointY="171.5" />
+        <EntityTypeShape EntityType="girospruebasModel.comproban" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="girospruebasModel.concepto" Width="1.5" PointX="2.75" PointY="6.25" />
+        <EntityTypeShape EntityType="girospruebasModel.concluido" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="girospruebasModel.conpago" Width="1.5" PointX="3" PointY="273.375" />
+        <EntityTypeShape EntityType="girospruebasModel.consueldo" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="girospruebasModel.contablec" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="girospruebasModel.contabled" Width="1.5" PointX="5" PointY="5" />
+        <EntityTypeShape EntityType="girospruebasModel.contrato" Width="1.5" PointX="13.75" PointY="8.75" />
+        <EntityTypeShape EntityType="girospruebasModel.corresponsale" Width="1.5" PointX="10.25" PointY="188.75" />
+        <EntityTypeShape EntityType="girospruebasModel.credito" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ct" Width="1.5" PointX="10.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cuarta" Width="1.5" PointX="12.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.cuenta" Width="1.5" PointX="3" PointY="195.375" />
+        <EntityTypeShape EntityType="girospruebasModel.denuncia" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.departa" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.destino" Width="1.5" PointX="12.5" PointY="189" />
+        <EntityTypeShape EntityType="girospruebasModel.destinosd" Width="1.5" PointX="14.75" PointY="194.625" />
+        <EntityTypeShape EntityType="girospruebasModel.distrito" Width="1.5" PointX="15.75" PointY="3.75" />
+        <EntityTypeShape EntityType="girospruebasModel.documento" Width="1.5" PointX="3" PointY="94.75" />
+        <EntityTypeShape EntityType="girospruebasModel.dolare" Width="1.5" PointX="12.75" PointY="237.375" />
+        <EntityTypeShape EntityType="girospruebasModel.domingo" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="girospruebasModel.empleadore" Width="1.5" PointX="15.75" PointY="11.75" />
+        <EntityTypeShape EntityType="girospruebasModel.envio" Width="1.5" PointX="10.5" PointY="212.125" />
+        <EntityTypeShape EntityType="girospruebasModel.errore" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.factura" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.familiar" Width="1.5" PointX="18.75" PointY="6.75" />
+        <EntityTypeShape EntityType="girospruebasModel.fcoperac" Width="1.5" PointX="12.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.fedex" Width="1.5" PointX="14.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.formacion" Width="1.5" PointX="16.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.gananper" Width="1.5" PointX="18.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.girosnac" Width="1.5" PointX="6.75" PointY="19.75" />
+        <EntityTypeShape EntityType="girospruebasModel.gratifica" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.grupos" Width="1.5" PointX="20.75" PointY="8.75" />
+        <EntityTypeShape EntityType="girospruebasModel.guinazu" Width="1.5" PointX="20.75" PointY="12.75" />
+        <EntityTypeShape EntityType="girospruebasModel.horario" Width="1.5" PointX="20.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ingreper" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.institucione" Width="1.5" PointX="22.75" PointY="5.75" />
+        <EntityTypeShape EntityType="girospruebasModel.interage" Width="1.5" PointX="22.75" PointY="9.75" />
+        <EntityTypeShape EntityType="girospruebasModel.intermex" Width="1.5" PointX="22.75" PointY="12.75" />
+        <EntityTypeShape EntityType="girospruebasModel.intermovim" Width="1.5" PointX="3" PointY="288.875" />
+        <EntityTypeShape EntityType="girospruebasModel.interoperac" Width="1.5" PointX="3" PointY="266" />
+        <EntityTypeShape EntityType="girospruebasModel.intertran" Width="1.5" PointX="22.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.inusual" Width="1.5" PointX="8.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.juridico" Width="1.5" PointX="10.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.kardex" Width="1.5" PointX="5.25" PointY="232.5" />
+        <EntityTypeShape EntityType="girospruebasModel.laboral" Width="1.5" PointX="12.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.liquida" Width="1.5" PointX="14.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.liquidacione" Width="1.5" PointX="15.75" PointY="238.25" />
+        <EntityTypeShape EntityType="girospruebasModel.localidade" Width="1.5" PointX="14.75" PointY="189.125" />
+        <EntityTypeShape EntityType="girospruebasModel.logclien" Width="1.5" PointX="16.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.logpago" Width="1.5" PointX="18.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.lotescon" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.marcacion" Width="1.5" PointX="3" PointY="140.875" />
+        <EntityTypeShape EntityType="girospruebasModel.mbocupa" Width="1.5" PointX="3" PointY="138" />
+        <EntityTypeShape EntityType="girospruebasModel.mbsubagen" Width="1.5" PointX="3" PointY="165.25" />
+        <EntityTypeShape EntityType="girospruebasModel.mbubigeo" Width="1.5" PointX="3" PointY="98.375" />
+        <EntityTypeShape EntityType="girospruebasModel.mgcomi" Width="1.5" PointX="3" PointY="231.25" />
+        <EntityTypeShape EntityType="girospruebasModel.mgram" Width="1.5" PointX="0.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.moneda" Width="1.5" PointX="3" PointY="216.75" />
+        <EntityTypeShape EntityType="girospruebasModel.moneye" Width="1.5" PointX="2.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.nacional" Width="1.5" PointX="5.25" PointY="223.25" />
+        <EntityTypeShape EntityType="girospruebasModel.objeto" Width="1.5" PointX="3" PointY="110.875" />
+        <EntityTypeShape EntityType="girospruebasModel.obligado" Width="1.5" PointX="24.75" PointY="4.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ocupa" Width="1.5" PointX="3" PointY="281.875" />
+        <EntityTypeShape EntityType="girospruebasModel.ofac" Width="1.5" PointX="24.75" PointY="8.75" />
+        <EntityTypeShape EntityType="girospruebasModel.opcione" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="girospruebasModel.operaact" Width="1.5" PointX="24.75" PointY="12.75" />
+        <EntityTypeShape EntityType="girospruebasModel.orbi" Width="1.5" PointX="24.75" PointY="16.75" />
+        <EntityTypeShape EntityType="girospruebasModel.pago" Width="1.5" PointX="24.75" PointY="20.75" />
+        <EntityTypeShape EntityType="girospruebasModel.pais" Width="1.5" PointX="0.75" PointY="178.375" />
+        <EntityTypeShape EntityType="girospruebasModel.paisesmg" Width="1.5" PointX="20.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.patrim" Width="1.5" PointX="26.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.perfile" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="girospruebasModel.periodo" Width="1.5" PointX="26.75" PointY="3.75" />
+        <EntityTypeShape EntityType="girospruebasModel.permiso" Width="1.5" PointX="26.75" PointY="7.75" />
+        <EntityTypeShape EntityType="girospruebasModel.persocaja" Width="1.5" PointX="26.75" PointY="12.75" />
+        <EntityTypeShape EntityType="girospruebasModel.persodia" Width="1.5" PointX="26.75" PointY="15.75" />
+        <EntityTypeShape EntityType="girospruebasModel.personal" Width="1.5" PointX="8" PointY="186" />
+        <EntityTypeShape EntityType="girospruebasModel.postal" Width="1.5" PointX="3" PointY="168.5" />
+        <EntityTypeShape EntityType="girospruebasModel.prestamo" Width="1.5" PointX="26.75" PointY="18.75" />
+        <EntityTypeShape EntityType="girospruebasModel.presupuesto" Width="1.5" PointX="26.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.provision" Width="1.5" PointX="14.75" PointY="27.75" />
+        <EntityTypeShape EntityType="girospruebasModel.queja" Width="1.5" PointX="28.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.reclamonu" Width="1.5" PointX="3" PointY="87.375" />
+        <EntityTypeShape EntityType="girospruebasModel.reclamo" Width="1.5" PointX="28.75" PointY="8.75" />
+        <EntityTypeShape EntityType="girospruebasModel.reclamoti" Width="1.5" PointX="3" PointY="117.25" />
+        <EntityTypeShape EntityType="girospruebasModel.reclaopenu" Width="1.5" PointX="3" PointY="294.125" />
+        <EntityTypeShape EntityType="girospruebasModel.reclaopera" Width="1.5" PointX="3" PointY="114.375" />
+        <EntityTypeShape EntityType="girospruebasModel.remunera" Width="1.5" PointX="16.75" PointY="28.75" />
+        <EntityTypeShape EntityType="girospruebasModel.remunerad" Width="1.5" PointX="18.75" PointY="28.75" />
+        <EntityTypeShape EntityType="girospruebasModel.resuman" Width="1.5" PointX="28.75" PointY="20.75" />
+        <EntityTypeShape EntityType="girospruebasModel.riafex" Width="1.5" PointX="20.75" PointY="28.75" />
+        <EntityTypeShape EntityType="girospruebasModel.riesgo" Width="1.5" PointX="28.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.rorope" Width="1.5" PointX="3" PointY="250.875" />
+        <EntityTypeShape EntityType="girospruebasModel.ro" Width="1.5" PointX="10.75" PointY="29.75" />
+        <EntityTypeShape EntityType="girospruebasModel.rubro" Width="1.5" PointX="30.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.seccione" Width="1.5" PointX="5.75" PointY="186.25" />
+        <EntityTypeShape EntityType="girospruebasModel.servicio" Width="1.5" PointX="30.75" PointY="5.75" />
+        <EntityTypeShape EntityType="girospruebasModel.sole" Width="1.5" PointX="30.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.sospechan" Width="1.5" PointX="30.75" PointY="23.75" />
+        <EntityTypeShape EntityType="girospruebasModel.sospecha" Width="1.5" PointX="26.75" PointY="30.75" />
+        <EntityTypeShape EntityType="girospruebasModel.sunat" Width="1.5" PointX="0.75" PointY="31.75" />
+        <EntityTypeShape EntityType="girospruebasModel.tablasr" Width="1.5" PointX="2.75" PointY="31.75" />
+        <EntityTypeShape EntityType="girospruebasModel.tablast" Width="1.5" PointX="4.75" PointY="31.75" />
+        <EntityTypeShape EntityType="girospruebasModel.tarifa" Width="1.5" PointX="6.75" PointY="31.75" />
+        <EntityTypeShape EntityType="girospruebasModel.tarifasnac" Width="1.5" PointX="32.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.tercero" Width="1.5" PointX="32.75" PointY="5.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ticambio" Width="1.5" PointX="32.75" PointY="8.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ticambioage" Width="1.5" PointX="32.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ticambio1" Width="1.5" PointX="32.75" PointY="17.75" />
+        <EntityTypeShape EntityType="girospruebasModel.ticheque" Width="1.5" PointX="10.5" PointY="236.625" />
+        <EntityTypeShape EntityType="girospruebasModel.ticlave" Width="1.5" PointX="3" PointY="124.375" />
+        <EntityTypeShape EntityType="girospruebasModel.tipago" Width="1.5" PointX="32.75" PointY="21.75" />
+        <EntityTypeShape EntityType="girospruebasModel.tipocom" Width="1.5" PointX="3" PointY="286" />
+        <EntityTypeShape EntityType="girospruebasModel.titan" Width="1.5" PointX="32.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.titanlog" Width="1.5" PointX="28.75" PointY="32.75" />
+        <EntityTypeShape EntityType="girospruebasModel.totalagen" Width="1.5" PointX="32.75" PointY="29.75" />
+        <EntityTypeShape EntityType="girospruebasModel.totalme" Width="1.5" PointX="30.75" PointY="33.75" />
+        <EntityTypeShape EntityType="girospruebasModel.transaccione" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="girospruebasModel.travel" Width="1.5" PointX="32.75" PointY="33.75" />
+        <EntityTypeShape EntityType="girospruebasModel.travelsal" Width="1.5" PointX="34.75" PointY="0.75" />
+        <EntityTypeShape EntityType="girospruebasModel.trf" Width="1.5" PointX="3" PointY="101.5" />
+        <EntityTypeShape EntityType="girospruebasModel.ubigeo" Width="1.5" PointX="2.75" PointY="34.75" />
+        <EntityTypeShape EntityType="girospruebasModel.unica" Width="1.5" PointX="34.75" PointY="3.75" />
+        <EntityTypeShape EntityType="girospruebasModel.usuario" Width="1.5" PointX="0.75" PointY="183.5" />
+        <EntityTypeShape EntityType="girospruebasModel.usuavar" Width="1.5" PointX="34.75" PointY="10.75" />
+        <EntityTypeShape EntityType="girospruebasModel.utilidad" Width="1.5" PointX="12.75" PointY="34.75" />
+        <EntityTypeShape EntityType="girospruebasModel.utilidade" Width="1.5" PointX="34.75" PointY="14.75" />
+        <EntityTypeShape EntityType="girospruebasModel.vacacione" Width="1.5" PointX="18.75" PointY="34.75" />
+        <EntityTypeShape EntityType="girospruebasModel.valormn" Width="1.5" PointX="20.75" PointY="34.75" />
+        <EntityTypeShape EntityType="girospruebasModel.viamerica" Width="1.5" PointX="34.75" PointY="24.75" />
+        <EntityTypeShape EntityType="girospruebasModel.log_triggers" Width="1.5" PointX="34.75" PointY="30.75" />
+        <AssociationConnector Association="girospruebasModel.usuariofk" />
+        <AssociationConnector Association="girospruebasModel.agenciafk" />
+        <AssociationConnector Association="girospruebasModel.clasefk" />
+        <AssociationConnector Association="girospruebasModel.cajafk" />
+        <AssociationConnector Association="girospruebasModel.cuentafk" />
+        <AssociationConnector Association="girospruebasModel.entidadfk" />
+        <AssociationConnector Association="girospruebasModel.monedafk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk1" />
+        <AssociationConnector Association="girospruebasModel.agenciafk1" />
+        <AssociationConnector Association="girospruebasModel.agenciafk2" />
+        <AssociationConnector Association="girospruebasModel.agenciafk3" />
+        <AssociationConnector Association="girospruebasModel.agenciafk4" />
+        <AssociationConnector Association="girospruebasModel.agenciafk5" />
+        <AssociationConnector Association="girospruebasModel.odagenciafk" />
+        <AssociationConnector Association="girospruebasModel.odagenciafk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk2" />
+        <AssociationConnector Association="girospruebasModel.usuariofk51" />
+        <AssociationConnector Association="girospruebasModel.usuariofk52" />
+        <AssociationConnector Association="girospruebasModel.usuariofk50" />
+        <AssociationConnector Association="girospruebasModel.usariofk" />
+        <AssociationConnector Association="girospruebasModel.bancofk3" />
+        <AssociationConnector Association="girospruebasModel.bancofk4" />
+        <AssociationConnector Association="girospruebasModel.bancofk5" />
+        <AssociationConnector Association="girospruebasModel.bcointermlfk" />
+        <AssociationConnector Association="girospruebasModel.ciudadfk" />
+        <AssociationConnector Association="girospruebasModel.paisfk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk3" />
+        <AssociationConnector Association="girospruebasModel.bancofk" />
+        <AssociationConnector Association="girospruebasModel.comisionfk" />
+        <AssociationConnector Association="girospruebasModel.monedafk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk4" />
+        <AssociationConnector Association="girospruebasModel.autoriza1fk" />
+        <AssociationConnector Association="girospruebasModel.autoriza2fk" />
+        <AssociationConnector Association="girospruebasModel.autoriza3fk" />
+        <AssociationConnector Association="girospruebasModel.autoriza4fk" />
+        <AssociationConnector Association="girospruebasModel.autoriza5fk" />
+        <AssociationConnector Association="girospruebasModel.bancofk1" />
+        <AssociationConnector Association="girospruebasModel.bcocuentafk" />
+        <AssociationConnector Association="girospruebasModel.cuentafk1" />
+        <AssociationConnector Association="girospruebasModel.cuentaprofk" />
+        <AssociationConnector Association="girospruebasModel.monedafk2" />
+        <AssociationConnector Association="girospruebasModel.odcuentafk" />
+        <AssociationConnector Association="girospruebasModel.odcuentafk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk5" />
+        <AssociationConnector Association="girospruebasModel.autorizafk" />
+        <AssociationConnector Association="girospruebasModel.bancofk2" />
+        <AssociationConnector Association="girospruebasModel.monedafk3" />
+        <AssociationConnector Association="girospruebasModel.odcajafk" />
+        <AssociationConnector Association="girospruebasModel.odcentrofk" />
+        <AssociationConnector Association="girospruebasModel.odvariosfk" />
+        <AssociationConnector Association="girospruebasModel.operacionfk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk6" />
+        <AssociationConnector Association="girospruebasModel.usuariofk7" />
+        <AssociationConnector Association="girospruebasModel.usuariofk8" />
+        <AssociationConnector Association="girospruebasModel.cajafk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk9" />
+        <AssociationConnector Association="girospruebasModel.cajafk2" />
+        <AssociationConnector Association="girospruebasModel.odcajafk1" />
+        <AssociationConnector Association="girospruebasModel.odcentrofk1" />
+        <AssociationConnector Association="girospruebasModel.odclientefk" />
+        <AssociationConnector Association="girospruebasModel.operacionfk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk10" />
+        <AssociationConnector Association="girospruebasModel.cajafk3" />
+        <AssociationConnector Association="girospruebasModel.monedafk4" />
+        <AssociationConnector Association="girospruebasModel.cajafk4" />
+        <AssociationConnector Association="girospruebasModel.cajafk5" />
+        <AssociationConnector Association="girospruebasModel.cajafk6" />
+        <AssociationConnector Association="girospruebasModel.cajafk7" />
+        <AssociationConnector Association="girospruebasModel.cajafk8" />
+        <AssociationConnector Association="girospruebasModel.cajafk9" />
+        <AssociationConnector Association="girospruebasModel.cajafk10" />
+        <AssociationConnector Association="girospruebasModel.tracajafk" />
+        <AssociationConnector Association="girospruebasModel.tracajafk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk11" />
+        <AssociationConnector Association="girospruebasModel.monedafk5" />
+        <AssociationConnector Association="girospruebasModel.codigofk" />
+        <AssociationConnector Association="girospruebasModel.codigofk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk41" />
+        <AssociationConnector Association="girospruebasModel.usuariofk12" />
+        <AssociationConnector Association="girospruebasModel.centrofk" />
+        <AssociationConnector Association="girospruebasModel.centrofk1" />
+        <AssociationConnector Association="girospruebasModel.ciudadfk1" />
+        <AssociationConnector Association="girospruebasModel.corresponsalfk" />
+        <AssociationConnector Association="girospruebasModel.prefijadofk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk13" />
+        <AssociationConnector Association="girospruebasModel.monedafk6" />
+        <AssociationConnector Association="girospruebasModel.tipofk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk14" />
+        <AssociationConnector Association="girospruebasModel.usuarioinfk" />
+        <AssociationConnector Association="girospruebasModel.ciudadfk2" />
+        <AssociationConnector Association="girospruebasModel.ciudadfk3" />
+        <AssociationConnector Association="girospruebasModel.ciudadfk4" />
+        <AssociationConnector Association="girospruebasModel.paisfk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk15" />
+        <AssociationConnector Association="girospruebasModel.usuariofk16" />
+        <AssociationConnector Association="girospruebasModel.clientefk" />
+        <AssociationConnector Association="girospruebasModel.nacionfk" />
+        <AssociationConnector Association="girospruebasModel.postalfk" />
+        <AssociationConnector Association="girospruebasModel.tipoctafk" />
+        <AssociationConnector Association="girospruebasModel.tipodocfk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk17" />
+        <AssociationConnector Association="girospruebasModel.usuariofk48" />
+        <AssociationConnector Association="girospruebasModel.usuariofk18" />
+        <AssociationConnector Association="girospruebasModel.conceptosfk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk33" />
+        <AssociationConnector Association="girospruebasModel.corresponsalfk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk19" />
+        <AssociationConnector Association="girospruebasModel.tipoctafk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk20" />
+        <AssociationConnector Association="girospruebasModel.destinofk" />
+        <AssociationConnector Association="girospruebasModel.destinofk1" />
+        <AssociationConnector Association="girospruebasModel.destinofk2" />
+        <AssociationConnector Association="girospruebasModel.usuariofk21" />
+        <AssociationConnector Association="girospruebasModel.usuariofk22" />
+        <AssociationConnector Association="girospruebasModel.tipofk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk23" />
+        <AssociationConnector Association="girospruebasModel.usuarioinfk1" />
+        <AssociationConnector Association="girospruebasModel.localidadfk" />
+        <AssociationConnector Association="girospruebasModel.paisfk2" />
+        <AssociationConnector Association="girospruebasModel.usuariofk24" />
+        <AssociationConnector Association="girospruebasModel.usuariofk45" />
+        <AssociationConnector Association="girospruebasModel.usuariofk44" />
+        <AssociationConnector Association="girospruebasModel.monedafk7" />
+        <AssociationConnector Association="girospruebasModel.usuariofk25" />
+        <AssociationConnector Association="girospruebasModel.usuarioinfk2" />
+        <AssociationConnector Association="girospruebasModel.usuariofk26" />
+        <AssociationConnector Association="girospruebasModel.usuariofk27" />
+        <AssociationConnector Association="girospruebasModel.usariofk1" />
+        <AssociationConnector Association="girospruebasModel.usuariofk37" />
+        <AssociationConnector Association="girospruebasModel.usuariofk35" />
+        <AssociationConnector Association="girospruebasModel.usuariofk36" />
+        <AssociationConnector Association="girospruebasModel.usuariofk28" />
+        <AssociationConnector Association="girospruebasModel.monedafk8" />
+        <AssociationConnector Association="girospruebasModel.usuariofk29" />
+        <AssociationConnector Association="girospruebasModel.usuariofk30" />
+        <AssociationConnector Association="girospruebasModel.usuarioinfk3" />
+        <AssociationConnector Association="girospruebasModel.usuariofk31" />
+        <AssociationConnector Association="girospruebasModel.usuariofk32" />
+        <AssociationConnector Association="girospruebasModel.perfilfk" />
+        <AssociationConnector Association="girospruebasModel.transaccfk" />
+        <AssociationConnector Association="girospruebasModel.seccionfk" />
+        <AssociationConnector Association="girospruebasModel.usuariofk40" />
+        <AssociationConnector Association="girospruebasModel.usuariofk47" />
+        <AssociationConnector Association="girospruebasModel.usuariofk39" />
+        <AssociationConnector Association="girospruebasModel.usuariofk46" />
+        <AssociationConnector Association="girospruebasModel.usuariofk38" />
+        <AssociationConnector Association="girospruebasModel.usuariofk49" />
+        <AssociationConnector Association="girospruebasModel.usuariofk43" />
+        <AssociationConnector Association="girospruebasModel.usuariofk34" />
+        <AssociationConnector Association="girospruebasModel.usuariofk42" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

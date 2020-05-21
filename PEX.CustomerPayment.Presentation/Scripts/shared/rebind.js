@@ -55,4 +55,6 @@ if ($.extend && $.validator) {
         return true;
     });
     $.validator.addMethod('date', function (value, element) { return true; });
+
+    
 }

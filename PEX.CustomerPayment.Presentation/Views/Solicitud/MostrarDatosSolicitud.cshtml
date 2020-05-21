@@ -1,0 +1,163 @@
+﻿@model PEX.CustomerPayment.Presentation.ViewModels.DatosSoliitudViewModel
+
+@{
+    ViewBag.Title = "Datos transacción";
+
+}
+
+
+@section styles{
+
+    <link href="~/Content/plugins/sweetalert/sweetalert2.min.css" rel="stylesheet" />
+
+}
+
+<div class="container">
+    <h2 class="font-weight-400 text-center mt-3">Solicitud de pago</h2>
+    @*<p class="text-4 text-center mb-4">You are requesting money from <span class="font-weight-500">demo@gmail.com</span></p>*@
+    <div class="row">
+        <div class="col-md-8 col-lg-6 mx-auto">
+            <div class="bg-light shadow-sm rounded p-3 p-sm-4 mb-4">
+
+                @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "post", OnSuccess = "onSuccess" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(x => Model.SolicitudPagoId)
+                    <!-- Request Money Confirm Details
+                    ============================================= -->
+                    <h3 class="text-5 font-weight-400 mb-3">Datos de la transacción</h3>
+                    <div class="row">
+                        <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">N° de referencia</p>
+                        <p class="col-sm-8">@Model.SolicitudPago.NumeroReferencia</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">Estado</p>
+                        <p class="col-sm-8">@Model.SolicitudPago.EstadoTransaccion</p>
+                    </div>
+                    <div class="row">
+                        <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">País</p>
+                        <p class="col-sm-8">@Model.PaisOrigen</p>
+                    </div>
+
+                    if (!Model.ClienteRegistrado)
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.TipoDocumento)
+                            @Html.DropDownListFor(x => Model.TipoDocumento, new SelectList(Model.LstTipoDocumeno, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
+                            @Html.ValidationMessageFor(x => Model.TipoDocumento)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.NumeroDocumento)
+                            @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", placeholder = "Número de documento de itendidad" })
+                            @Html.ValidationMessageFor(x => Model.NumeroDocumento)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.Nombres)
+                            @Html.TextBoxFor(x => Model.Nombres, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.Nombres)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.ApellidoPaterno)
+                            @Html.TextBoxFor(x => Model.ApellidoPaterno, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.ApellidoPaterno)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.ApellidoMaterno)
+                            @Html.TextBoxFor(x => Model.ApellidoMaterno, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.ApellidoMaterno)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.Correo)
+                            @Html.TextBoxFor(x => Model.Correo, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.Correo)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.Direccion)
+                            @Html.TextBoxFor(x => Model.Direccion, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.Direccion)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.NacionalidadId)
+                            @Html.DropDownListFor(x => Model.NacionalidadId, new SelectList(Model.LstPaises, "Id", "Text", "[-- Seleccione --]"))
+                            @Html.ValidationMessageFor(x => Model.NacionalidadId)
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.NumeroDocumento)
+                            @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", disabled = "disabled" })
+                        </div>
+                        @Html.HiddenFor(x => Model.NumeroDocumento)
+                    }
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => Model.CodigoBanco)
+                        @Html.DropDownListFor(x => Model.CodigoBanco, new SelectList(Model.LstBancos, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
+                        @Html.ValidationMessageFor(x => Model.CodigoBanco)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => Model.NumeroCuenta)
+                        @Html.TextBoxFor(x => Model.NumeroCuenta, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => Model.NumeroCuenta)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => Model.NumeroCuentaInterbancario)
+                        @Html.TextBoxFor(x => Model.NumeroCuentaInterbancario, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => Model.NumeroCuentaInterbancario)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => Model.Celular)
+                        @Html.TextBoxFor(x => Model.Celular, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => Model.Celular)
+                    </div>
+
+                    <button class="btn btn-primary btn-block ladda-button">Continuar <i class="fa fa-arrow-right"></i></button>
+
+                }
+                <!-- Request Money Confirm Details end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+
+
+    <script src="~/Content/plugins/sweetalert/sweetalert2.min.js"></script>
+
+    <script>
+
+        function onSuccess(data) {
+
+
+            if (data.error) {
+                Swal.fire({
+                    title: 'Error',
+                    text: data.message,
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+                return false;
+            }
+
+            window.location = '@Url.Action("FinalizarSolicitud","Solicitud", new { solicitudId = Model.SolicitudPagoId })';
+
+
+        }
+
+    </script>
+
+}

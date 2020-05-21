@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="MoneyGram_ReferenceNumber" targetNamespace="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber" />
+  </wsdl:types>
+  <wsdl:message name="referenceNumberIn">
+    <wsdl:part name="agentID" type="xsd:string" />
+    <wsdl:part name="agentSequence" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="referenceNumber" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="referenceNumberOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="MoneyGram_ReferenceNumberPort">
+    <wsdl:operation name="referenceNumber">
+      <documentation>Recupera el pais, monedas, opciones de envio, y otra informacion de codeTable en una variedad de lenguajes.</documentation>
+      <wsdl:input message="tns:referenceNumberIn" />
+      <wsdl:output message="tns:referenceNumberOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MoneyGram_ReferenceNumberBinding" type="tns:MoneyGram_ReferenceNumberPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="referenceNumber">
+      <soap:operation soapAction="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber#referenceNumber" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MoneyGram_ReferenceNumberService">
+    <wsdl:port name="MoneyGram_ReferenceNumberPort" binding="tns:MoneyGram_ReferenceNumberBinding">
+      <soap:address location="http://peruexpress.cloud/ws_moneygram_dev/soap.php?servicio=MoneyGram_ReferenceNumber" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -153,6 +153,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
@@ -234,11 +235,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\ReferenceNumerServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SolicitudController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ConstantHelpers.cs" />
+    <Compile Include="Helpers\ExtensionHelper.cs" />
+    <Compile Include="Helpers\XmlHelper.cs" />
     <Compile Include="Models\Database\accontrol.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
     </Compile>
@@ -623,21 +633,6 @@
     <Compile Include="Models\Database\personal.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Database\PexModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PexModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Database\PexModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PexModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Database\PexModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PexModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Database\postal.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
     </Compile>
@@ -706,6 +701,33 @@
     </Compile>
     <Compile Include="Models\Database\sospechan.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\Agencia.cs">
+      <DependentUpon>PexModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\EquivalenciaPaises.cs">
+      <DependentUpon>PexModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\InformacionCliente.cs">
+      <DependentUpon>PexModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\PexModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PexModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\PexModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PexModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\PexModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PexModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database\SQL\SolicitudPago.cs">
+      <DependentUpon>PexModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Database\sunat.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
@@ -797,10 +819,22 @@
     <Compile Include="Models\Database\viamerica.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\General\CargarDatosContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Moneygram\Models\ReferenceNumberEntity.cs" />
+    <Compile Include="Servicios\Moneygram\ServiceHandler.cs" />
     <Compile Include="ViewModels\ConsultaReferenciaViewModel.cs" />
+    <Compile Include="ViewModels\DatosSoliitudViewModel.cs" />
+    <Compile Include="ViewModels\InformacionPagoViewModel.cs" />
+    <Compile Include="ViewModels\JsonEntity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ReferenceNumerServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\ReferenceNumerServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\ReferenceNumerServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -865,6 +899,12 @@
     <Content Include="Content\payyed\vendor\owl.carousel\assets\owl.carousel.min.css" />
     <Content Include="Content\payyed\vendor\owl.carousel\assets\owl.video.play.png" />
     <Content Include="Content\payyed\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="Content\plugins\sweetalert\sweetalert2.all.js" />
+    <Content Include="Content\plugins\sweetalert\sweetalert2.all.min.js" />
+    <Content Include="Content\plugins\sweetalert\sweetalert2.css" />
+    <Content Include="Content\plugins\sweetalert\sweetalert2.js" />
+    <Content Include="Content\plugins\sweetalert\sweetalert2.min.css" />
+    <Content Include="Content\plugins\sweetalert\sweetalert2.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -879,25 +919,18 @@
       <DependentUpon>GirosModel.edmx</DependentUpon>
       <LastGenOutput>GirosModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Database\PexModel.Context.tt">
+    <Content Include="Models\Database\SQL\PexModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PexModel.Context.cs</LastGenOutput>
       <DependentUpon>PexModel.edmx</DependentUpon>
+      <LastGenOutput>PexModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Database\PexModel.tt">
+    <Content Include="Models\Database\SQL\PexModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>PexModel.edmx</DependentUpon>
       <LastGenOutput>PexModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Database\PexModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PexModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Database\PexModel.edmx.diagram">
-      <DependentUpon>PexModel.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\Database\GirosModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GirosModel.Designer.cs</LastGenOutput>
@@ -920,6 +953,14 @@
     <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\payyed\vendor\font-awesome\webfonts\fa-solid-900d41d.eot" />
+    <None Include="Connected Services\ReferenceNumerServiceReference\MoneyGram_ReferenceNumber.wsdl" />
+    <EntityDeploy Include="Models\Database\SQL\PexModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PexModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Database\SQL\PexModel.edmx.diagram">
+      <DependentUpon>PexModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -964,6 +1005,9 @@
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Boolean.cshtml" />
     <Content Include="Views\Error\_Index.cshtml" />
+    <Content Include="Views\Solicitud\MostrarDatosSolicitud.cshtml" />
+    <Content Include="Views\Solicitud\ConsultarReferencia.cshtml" />
+    <Content Include="Views\Solicitud\FinalizarSolicitud.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -984,6 +1028,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ReferenceNumerServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PEX.SC.PruebasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agencia">
+          <Key>
+            <PropertyRef Name="AgenciaID" />
+          </Key>
+          <Property Name="AgenciaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoAgencia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AgentID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AgentSequence" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Token" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="CodigoUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SobreGiro" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="RIA" Type="bit" />
+          <Property Name="Grupo" Type="varchar" MaxLength="50" />
+          <Property Name="EntidadRecaudo" Type="varchar" MaxLength="50" />
+          <Property Name="EntidadSeguimientorecaudo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EquivalenciaPaises">
+          <Key>
+            <PropertyRef Name="int_CodigoEquivalenciaPaises" />
+          </Key>
+          <Property Name="int_CodigoEquivalenciaPaises" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vch_AcronimoMoneyGram" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="vch_DescripcionMoneyGram" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="vch_AcronimoPEX" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="vch_DescripcionPEX" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="vch_PostalCodeFormat" Type="varchar" MaxLength="50" />
+          <Property Name="HabilitadoWestern" Type="bit" />
+        </EntityType>
+        <EntityType Name="InformacionCliente">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PaisResidenciaId" Type="int" />
+          <Property Name="EstadoId" Type="int" />
+          <Property Name="PaisTelefonoId" Type="int" />
+          <Property Name="TipoDocumentoId" Type="varchar" MaxLength="100" />
+          <Property Name="PaisExpedicionDocumentoId" Type="int" />
+          <Property Name="LugarEmisionDocumento" Type="varchar" MaxLength="550" />
+          <Property Name="FechaEmisionDocumento" Type="datetime" />
+          <Property Name="FechaCaducidadDocumento" Type="datetime" />
+          <Property Name="SituacionLaboralId" Type="varchar" MaxLength="100" />
+          <Property Name="SectorIndustriaId" Type="varchar" MaxLength="100" />
+          <Property Name="PaisNacimientoId" Type="int" />
+          <Property Name="PaisNacionalidadId" Type="int" />
+          <Property Name="SexoId" Type="varchar" MaxLength="100" />
+          <Property Name="DepartamentoId" Type="varchar" MaxLength="100" />
+          <Property Name="ProvinciaId" Type="varchar" MaxLength="100" />
+          <Property Name="DistritoId" Type="varchar" MaxLength="100" />
+          <Property Name="CodigoCiudad" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+          <Property Name="Postal" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="SolicitudPago">
+          <Key>
+            <PropertyRef Name="SolicitudPagoId" />
+          </Key>
+          <Property Name="SolicitudPagoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoCliente" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NumeroReferencia" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="FechaActualizacion" Type="datetime" />
+          <Property Name="Estado" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="CodigoAgencia" Type="varchar" MaxLength="5" />
+          <Property Name="CodigoUsuario" Type="varchar" MaxLength="20" />
+          <Property Name="ReciboMGID" Type="int" />
+          <Property Name="EstadoTransaccion" Type="varchar" MaxLength="150" />
+          <Property Name="PaisOrigen" Type="int" />
+          <Property Name="MontoTotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Moneda" Type="varchar" MaxLength="50" />
+          <Property Name="TransactionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NumeroCuenta" Type="varchar" MaxLength="50" />
+          <Property Name="NumeroCuentaInterbancario" Type="varchar" MaxLength="50" />
+          <Property Name="CodigoBanco" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="PEXSCPruebasModelStoreContainer">
+          <EntitySet Name="Agencia" EntityType="Self.Agencia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EquivalenciaPaises" EntityType="Self.EquivalenciaPaises" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InformacionCliente" EntityType="Self.InformacionCliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SolicitudPago" EntityType="Self.SolicitudPago" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PEX.SC.PruebasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Agencia">
+          <Key>
+            <PropertyRef Name="AgenciaID" />
+          </Key>
+          <Property Name="AgenciaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoAgencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AgentID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AgentSequence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CodigoUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SobreGiro" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="RIA" Type="Boolean" />
+          <Property Name="Grupo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EntidadRecaudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EntidadSeguimientorecaudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EquivalenciaPaises">
+          <Key>
+            <PropertyRef Name="int_CodigoEquivalenciaPaises" />
+          </Key>
+          <Property Name="int_CodigoEquivalenciaPaises" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vch_AcronimoMoneyGram" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vch_DescripcionMoneyGram" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vch_AcronimoPEX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vch_DescripcionPEX" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vch_PostalCodeFormat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HabilitadoWestern" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="InformacionCliente">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PaisResidenciaId" Type="Int32" />
+          <Property Name="EstadoId" Type="Int32" />
+          <Property Name="PaisTelefonoId" Type="Int32" />
+          <Property Name="TipoDocumentoId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PaisExpedicionDocumentoId" Type="Int32" />
+          <Property Name="LugarEmisionDocumento" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+          <Property Name="FechaEmisionDocumento" Type="DateTime" Precision="3" />
+          <Property Name="FechaCaducidadDocumento" Type="DateTime" Precision="3" />
+          <Property Name="SituacionLaboralId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SectorIndustriaId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PaisNacimientoId" Type="Int32" />
+          <Property Name="PaisNacionalidadId" Type="Int32" />
+          <Property Name="SexoId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DepartamentoId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProvinciaId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DistritoId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoCiudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Postal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SolicitudPago">
+          <Key>
+            <PropertyRef Name="SolicitudPagoId" />
+          </Key>
+          <Property Name="SolicitudPagoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoCliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumeroReferencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaActualizacion" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CodigoAgencia" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ReciboMGID" Type="Int32" />
+          <Property Name="EstadoTransaccion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="PaisOrigen" Type="Int32" />
+          <Property Name="MontoTotal" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Moneda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransactionId" Type="Guid" Nullable="false" />
+          <Property Name="NumeroCuenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroCuentaInterbancario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoBanco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PexSqlEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agencia" EntityType="Self.Agencia" />
+          <EntitySet Name="EquivalenciaPaises" EntityType="Self.EquivalenciaPaises" />
+          <EntitySet Name="InformacionCliente" EntityType="Self.InformacionCliente" />
+          <EntitySet Name="SolicitudPago" EntityType="Self.SolicitudPago" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PEXSCPruebasModelStoreContainer" CdmEntityContainer="PexSqlEntities">
+          <EntitySetMapping Name="Agencia">
+            <EntityTypeMapping TypeName="PEX.SC.PruebasModel.Agencia">
+              <MappingFragment StoreEntitySet="Agencia">
+                <ScalarProperty Name="AgenciaID" ColumnName="AgenciaID" />
+                <ScalarProperty Name="CodigoAgencia" ColumnName="CodigoAgencia" />
+                <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+                <ScalarProperty Name="AgentSequence" ColumnName="AgentSequence" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="CodigoUsuario" ColumnName="CodigoUsuario" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SobreGiro" ColumnName="SobreGiro" />
+                <ScalarProperty Name="RIA" ColumnName="RIA" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="EntidadRecaudo" ColumnName="EntidadRecaudo" />
+                <ScalarProperty Name="EntidadSeguimientorecaudo" ColumnName="EntidadSeguimientorecaudo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EquivalenciaPaises">
+            <EntityTypeMapping TypeName="PEX.SC.PruebasModel.EquivalenciaPaises">
+              <MappingFragment StoreEntitySet="EquivalenciaPaises">
+                <ScalarProperty Name="int_CodigoEquivalenciaPaises" ColumnName="int_CodigoEquivalenciaPaises" />
+                <ScalarProperty Name="vch_AcronimoMoneyGram" ColumnName="vch_AcronimoMoneyGram" />
+                <ScalarProperty Name="vch_DescripcionMoneyGram" ColumnName="vch_DescripcionMoneyGram" />
+                <ScalarProperty Name="vch_AcronimoPEX" ColumnName="vch_AcronimoPEX" />
+                <ScalarProperty Name="vch_DescripcionPEX" ColumnName="vch_DescripcionPEX" />
+                <ScalarProperty Name="vch_PostalCodeFormat" ColumnName="vch_PostalCodeFormat" />
+                <ScalarProperty Name="HabilitadoWestern" ColumnName="HabilitadoWestern" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InformacionCliente">
+            <EntityTypeMapping TypeName="PEX.SC.PruebasModel.InformacionCliente">
+              <MappingFragment StoreEntitySet="InformacionCliente">
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="PaisResidenciaId" ColumnName="PaisResidenciaId" />
+                <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+                <ScalarProperty Name="PaisTelefonoId" ColumnName="PaisTelefonoId" />
+                <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+                <ScalarProperty Name="PaisExpedicionDocumentoId" ColumnName="PaisExpedicionDocumentoId" />
+                <ScalarProperty Name="LugarEmisionDocumento" ColumnName="LugarEmisionDocumento" />
+                <ScalarProperty Name="FechaEmisionDocumento" ColumnName="FechaEmisionDocumento" />
+                <ScalarProperty Name="FechaCaducidadDocumento" ColumnName="FechaCaducidadDocumento" />
+                <ScalarProperty Name="SituacionLaboralId" ColumnName="SituacionLaboralId" />
+                <ScalarProperty Name="SectorIndustriaId" ColumnName="SectorIndustriaId" />
+                <ScalarProperty Name="PaisNacimientoId" ColumnName="PaisNacimientoId" />
+                <ScalarProperty Name="PaisNacionalidadId" ColumnName="PaisNacionalidadId" />
+                <ScalarProperty Name="SexoId" ColumnName="SexoId" />
+                <ScalarProperty Name="DepartamentoId" ColumnName="DepartamentoId" />
+                <ScalarProperty Name="ProvinciaId" ColumnName="ProvinciaId" />
+                <ScalarProperty Name="DistritoId" ColumnName="DistritoId" />
+                <ScalarProperty Name="CodigoCiudad" ColumnName="CodigoCiudad" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Postal" ColumnName="Postal" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SolicitudPago">
+            <EntityTypeMapping TypeName="PEX.SC.PruebasModel.SolicitudPago">
+              <MappingFragment StoreEntitySet="SolicitudPago">
+                <ScalarProperty Name="SolicitudPagoId" ColumnName="SolicitudPagoId" />
+                <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+                <ScalarProperty Name="NumeroReferencia" ColumnName="NumeroReferencia" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="CodigoAgencia" ColumnName="CodigoAgencia" />
+                <ScalarProperty Name="CodigoUsuario" ColumnName="CodigoUsuario" />
+                <ScalarProperty Name="ReciboMGID" ColumnName="ReciboMGID" />
+                <ScalarProperty Name="EstadoTransaccion" ColumnName="EstadoTransaccion" />
+                <ScalarProperty Name="PaisOrigen" ColumnName="PaisOrigen" />
+                <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+                <ScalarProperty Name="NumeroCuentaInterbancario" ColumnName="NumeroCuentaInterbancario" />
+                <ScalarProperty Name="CodigoBanco" ColumnName="CodigoBanco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

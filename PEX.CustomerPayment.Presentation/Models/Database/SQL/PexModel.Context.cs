@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PEX.CustomerPayment.Presentation.Models.Database
+namespace PEX.CustomerPayment.Presentation.Models.Database.SQL
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PexEntities : DbContext
+    public partial class PexSqlEntities : DbContext
     {
-        public PexEntities()
-            : base("name=PexEntities")
+        public PexSqlEntities()
+            : base("name=PexSqlEntities")
         {
         }
     
@@ -25,5 +25,9 @@ namespace PEX.CustomerPayment.Presentation.Models.Database
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Agencia> Agencia { get; set; }
+        public virtual DbSet<EquivalenciaPaises> EquivalenciaPaises { get; set; }
+        public virtual DbSet<InformacionCliente> InformacionCliente { get; set; }
+        public virtual DbSet<SolicitudPago> SolicitudPago { get; set; }
     }
 }
