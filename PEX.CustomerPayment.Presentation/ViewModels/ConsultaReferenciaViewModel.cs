@@ -3,13 +3,20 @@ using PEX.CustomerPayment.Presentation.Models.Database.SQL;
 using PEX.CustomerPayment.Presentation.Models.General;
 using PEX.CustomerPayment.Presentation.Servicios.Moneygram;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace PEX.CustomerPayment.Presentation.ViewModels
 {
     public class ConsultaReferenciaViewModel
     {
+        [Required]
+        [Display(Name = "N° de referencia")]
+        [StringLength(8, MinimumLength = 8, ErrorMessage = "El N° de referencia debe tener 8 caracteres")]
         public string NumeroReferencia { get; set; }
+        [Required]
+        [Display(Name = "N° de documento de identidad")]
+        [StringLength(15, MinimumLength = 8, ErrorMessage = "El N° de doc. debe tener entre 8 y 15 caracteres")]
         public string NumeroDocumento { get; set; }
 
 
@@ -57,9 +64,13 @@ namespace PEX.CustomerPayment.Presentation.ViewModels
                     CodigoCliente = NumeroDocumento
                 };
                 cargarDatosContext.contextSql.SolicitudPago.Add(solicitudPago);
-                cargarDatosContext.contextSql.SaveChanges();
+            }
+            else
+            {
+                solicitudPago.EstadoTransaccion = estadoTransaccion;
             }
 
+            cargarDatosContext.contextSql.SaveChanges();
             return solicitudPago.TransactionId;
         }
 

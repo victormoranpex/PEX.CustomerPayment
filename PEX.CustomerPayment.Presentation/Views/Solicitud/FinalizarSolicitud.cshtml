@@ -1,4 +1,4 @@
-﻿
+﻿@model PEX.CustomerPayment.Presentation.ViewModels.DatosSoliitudViewModel
 @{
     ViewBag.Title = "Finalizar solicitud";
 }
@@ -15,8 +15,8 @@
                     <p class="text-center text-success text-8 line-height-07">Éxito!</p>
                     <p class="text-center text-4">Se ha registrado su solicitud correctamente</p>
                 </div>
-                <p class="text-center text-3 mb-4">Si necesitamos verificar alguno de sus datos uno de nuestros asesores se comunicará con usted al número o correo brindado. Su código de solicitud es el siguiente: <span class="text-4 font-weight-500"></span> @*<a href="#">Activity</a>.*@</p>
-                @*<button class="btn btn-primary btn-block">Send Money Again</button>*@
+                <p class="text-center text-3 mb-4">Si necesitamos verificar alguno de sus datos uno de nuestros asesores se comunicará con usted al número celular y correo brindado. Su código de solicitud es el siguiente: <span class="text-4 font-weight-500"> @("SL" + Model.SolicitudPago.NumeroReferencia)</span> </p>
+                <a class="btn btn-primary btn-block" href="@Url.Action("ConsultarReferencia","Solicitud")">Regresar al inicio</a>
                 @*<button class="btn btn-link btn-block"><i class="fas fa-print"></i> Print</button>*@
             </div>
         </div>

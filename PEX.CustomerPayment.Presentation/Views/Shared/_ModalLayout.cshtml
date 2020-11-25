@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.GUID = ViewBag.GUID ?? Guid.NewGuid().ToString();
+
+    var isForm = ViewBag.Form != null && ViewBag.Form is ModalFormBuilder;
+    var isAjax = ViewBag.Form != null && ViewBag.Form is ModalAjaxFormBuilder;
+    BaseFormBuilder form = null;
+    object ctx = Html;
+    if (isForm)
+    {
+        form = ViewBag.Form as ModalFormBuilder;
+    }
+    else if (isAjax)
+    {
+        form = ViewBag.Form as ModalAjaxFormBuilder;
+        ctx = Ajax;
+        if (string.IsNullOrEmpty((form as ModalAjaxFormBuilder).AjaxOptions.UpdateTargetId))
+        {
+            (form as ModalAjaxFormBuilder).AjaxOptions.UpdateTargetId = ViewBag.GUID;
+            (form as ModalAjaxFormBuilder).AjaxOptions.OnBegin = "modalLoading";
+            (form as ModalAjaxFormBuilder).AjaxOptions.OnComplete = "modalLoaded";
+        }
+    }
+}
+
+<div id="@ViewBag.GUID">
+    <div class="modal-header">
+        <h4 class="modal-title">@ViewBag.Title </h4>
+        <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+    </div>
+
+    @if (form != null)
+    {
+        form.BeginForm(ctx);
+    }
+
+    <div class="modal-body">
+        @Html.Alert(TempData)
+        @RenderBody()
+    </div>
+
+    <div class="modal-footer">
+        @*<button type="button" class="btn btn-link" data-dismiss="modal">@LayoutResource.Cerrar</button>*@
+        @if (form != null && !IsSectionDefined("ModalFooter"))
+        {
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
+            <button type="submit" data-ajax-loading class="btn btn-primary text-uppercase"> Guardar</button>
+        }
+        @RenderSection("ModalFooter", false)
+    </div>
+
+    @if (form != null)
+    {
+        Html.EndForm();
+    }
+
+    @RenderSection("Scripts", false)
+</div>

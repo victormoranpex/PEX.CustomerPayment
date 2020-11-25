@@ -31,5 +31,15 @@ namespace PEX.CustomerPayment.Presentation.Models.Database.SQL
         public string NumeroCuenta { get; set; }
         public string NumeroCuentaInterbancario { get; set; }
         public string CodigoBanco { get; set; }
+        public string Celular { get; set; }
+        public string Telefono { get; set; }
+        public string NumeroOperacionBanco { get; set; }
+        public string FechaHoraOperacionBanco { get; set; }
+        public string Correo { get; set; }
+        public string TipoMoneda { get; set; }
+        public Nullable<bool> EsClienteNuevo { get; set; }
+        public string OrigenFondos { get; set; }
+        public string DestinoFondos { get; set; }
+        public string RelacionRemitente { get; set; }
     }
 }

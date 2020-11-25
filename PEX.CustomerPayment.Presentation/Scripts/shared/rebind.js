@@ -20,6 +20,10 @@
             language: 'es'
         });
     }
+
+    // Automatically trigger the loading animation on click
+    Ladda.bind('button[type=submit]');
+
 };
 
 if ($.extend && $.validator) {

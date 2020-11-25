@@ -17,7 +17,20 @@ namespace PEX.CustomerPayment.Presentation.Helpers
         public static List<JsonEntity> LstTiposDocumento = new List<JsonEntity>
         {
             new JsonEntity { Id ="1", Text = "DNI"},
-            new JsonEntity { Id = "4", Text = "Carnet de extranjería"}
+            new JsonEntity { Id = "4", Text = "Carnet de extranjería"},
+            new JsonEntity { Id = "3", Text = "Pasaporte ó Cédula"},
+            new JsonEntity { Id = "2", Text = "Permiso temporal de permanencia"}
         };
+
+        public static List<JsonEntity> LstTipoMoneda = new List<JsonEntity>
+        {
+            new JsonEntity { Id = "USD", Text = "Dólares" },
+            new JsonEntity { Id = "PEN", Text = "Soles" },
+        };
+
+        public static class ParametroConfiguracion
+        {
+            public const string Codigo_Terminos_Condiciones_Solicitud_Pago = "010001";
+        }
     }
 }

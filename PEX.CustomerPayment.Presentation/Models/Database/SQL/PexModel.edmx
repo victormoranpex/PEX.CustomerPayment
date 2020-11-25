@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PEX.SC.PruebasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PEX.SC.PruebasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Agencia">
           <Key>
             <PropertyRef Name="AgenciaID" />
@@ -23,6 +23,7 @@
           <Property Name="Grupo" Type="varchar" MaxLength="50" />
           <Property Name="EntidadRecaudo" Type="varchar" MaxLength="50" />
           <Property Name="EntidadSeguimientorecaudo" Type="varchar" MaxLength="50" />
+          <Property Name="HabilitadoSolicitudPago" Type="bit" />
         </EntityType>
         <EntityType Name="EquivalenciaPaises">
           <Key>
@@ -62,6 +63,18 @@
           <Property Name="Postal" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="30" />
         </EntityType>
+        <EntityType Name="ParametroConfiguracion">
+          <Key>
+            <PropertyRef Name="ParametroConfiguracionId" />
+          </Key>
+          <Property Name="ParametroConfiguracionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoParametro" Type="varchar" MaxLength="6" />
+          <Property Name="DescripcionParametro" Type="varchar" MaxLength="150" />
+          <Property Name="ValorParametro" Type="text" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="UsuarioCreacion" Type="varchar" MaxLength="15" />
+          <Property Name="FechaCaducidad" Type="datetime" />
+        </EntityType>
         <EntityType Name="SolicitudPago">
           <Key>
             <PropertyRef Name="SolicitudPagoId" />
@@ -83,15 +96,25 @@
           <Property Name="NumeroCuenta" Type="varchar" MaxLength="50" />
           <Property Name="NumeroCuentaInterbancario" Type="varchar" MaxLength="50" />
           <Property Name="CodigoBanco" Type="varchar" MaxLength="50" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+          <Property Name="NumeroOperacionBanco" Type="varchar" MaxLength="50" />
+          <Property Name="FechaHoraOperacionBanco" Type="varchar" MaxLength="50" />
+          <Property Name="Correo" Type="varchar" MaxLength="300" />
+          <Property Name="TipoMoneda" Type="varchar" MaxLength="3" />
+          <Property Name="EsClienteNuevo" Type="bit" />
+          <Property Name="OrigenFondos" Type="varchar" MaxLength="255" />
+          <Property Name="DestinoFondos" Type="varchar" MaxLength="255" />
+          <Property Name="RelacionRemitente" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityContainer Name="PEXSCPruebasModelStoreContainer">
           <EntitySet Name="Agencia" EntityType="Self.Agencia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EquivalenciaPaises" EntityType="Self.EquivalenciaPaises" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InformacionCliente" EntityType="Self.InformacionCliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ParametroConfiguracion" EntityType="Self.ParametroConfiguracion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SolicitudPago" EntityType="Self.SolicitudPago" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PEX.SC.PruebasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -113,6 +136,7 @@
           <Property Name="Grupo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EntidadRecaudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EntidadSeguimientorecaudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HabilitadoSolicitudPago" Type="Boolean" />
         </EntityType>
         <EntityType Name="EquivalenciaPaises">
           <Key>
@@ -173,13 +197,36 @@
           <Property Name="NumeroCuenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NumeroCuentaInterbancario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CodigoBanco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroOperacionBanco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaHoraOperacionBanco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="TipoMoneda" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="EsClienteNuevo" Type="Boolean" />
+          <Property Name="OrigenFondos" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DestinoFondos" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="RelacionRemitente" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="PexSqlEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Agencia" EntityType="Self.Agencia" />
           <EntitySet Name="EquivalenciaPaises" EntityType="Self.EquivalenciaPaises" />
           <EntitySet Name="InformacionCliente" EntityType="Self.InformacionCliente" />
           <EntitySet Name="SolicitudPago" EntityType="Self.SolicitudPago" />
+          <EntitySet Name="ParametroConfiguracion" EntityType="PEX.SC.PruebasModel.ParametroConfiguracion" />
         </EntityContainer>
+        <EntityType Name="ParametroConfiguracion">
+          <Key>
+            <PropertyRef Name="ParametroConfiguracionId" />
+          </Key>
+          <Property Name="ParametroConfiguracionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoParametro" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionParametro" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ValorParametro" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="UsuarioCreacion" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCaducidad" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -189,6 +236,7 @@
           <EntitySetMapping Name="Agencia">
             <EntityTypeMapping TypeName="PEX.SC.PruebasModel.Agencia">
               <MappingFragment StoreEntitySet="Agencia">
+                <ScalarProperty Name="HabilitadoSolicitudPago" ColumnName="HabilitadoSolicitudPago" />
                 <ScalarProperty Name="AgenciaID" ColumnName="AgenciaID" />
                 <ScalarProperty Name="CodigoAgencia" ColumnName="CodigoAgencia" />
                 <ScalarProperty Name="AgentID" ColumnName="AgentID" />
@@ -249,6 +297,16 @@
           <EntitySetMapping Name="SolicitudPago">
             <EntityTypeMapping TypeName="PEX.SC.PruebasModel.SolicitudPago">
               <MappingFragment StoreEntitySet="SolicitudPago">
+                <ScalarProperty Name="RelacionRemitente" ColumnName="RelacionRemitente" />
+                <ScalarProperty Name="DestinoFondos" ColumnName="DestinoFondos" />
+                <ScalarProperty Name="OrigenFondos" ColumnName="OrigenFondos" />
+                <ScalarProperty Name="EsClienteNuevo" ColumnName="EsClienteNuevo" />
+                <ScalarProperty Name="TipoMoneda" ColumnName="TipoMoneda" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="FechaHoraOperacionBanco" ColumnName="FechaHoraOperacionBanco" />
+                <ScalarProperty Name="NumeroOperacionBanco" ColumnName="NumeroOperacionBanco" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
                 <ScalarProperty Name="SolicitudPagoId" ColumnName="SolicitudPagoId" />
                 <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
                 <ScalarProperty Name="NumeroReferencia" ColumnName="NumeroReferencia" />
@@ -266,6 +324,19 @@
                 <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
                 <ScalarProperty Name="NumeroCuentaInterbancario" ColumnName="NumeroCuentaInterbancario" />
                 <ScalarProperty Name="CodigoBanco" ColumnName="CodigoBanco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParametroConfiguracion">
+            <EntityTypeMapping TypeName="PEX.SC.PruebasModel.ParametroConfiguracion">
+              <MappingFragment StoreEntitySet="ParametroConfiguracion">
+                <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="ValorParametro" ColumnName="ValorParametro" />
+                <ScalarProperty Name="DescripcionParametro" ColumnName="DescripcionParametro" />
+                <ScalarProperty Name="CodigoParametro" ColumnName="CodigoParametro" />
+                <ScalarProperty Name="ParametroConfiguracionId" ColumnName="ParametroConfiguracionId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

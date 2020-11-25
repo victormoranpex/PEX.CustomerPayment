@@ -38,5 +38,10 @@ namespace PEX.CustomerPayment.Presentation.Helpers
             val = sb.ToString().ToUpper(CultureInfo.CurrentCulture).Trim();
             return val;
         }
+
+        public static string ConvertToUTF8(this string text)
+        {
+            return text.Replace("\\A1", "í").Replace("\\A0", "á").Replace("\\A2", "ó").Replace("\\82", "é").Replace("\\A4", "ñ").Replace("\\A3", "ú");
+        }
     }
 }

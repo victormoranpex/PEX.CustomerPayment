@@ -1,4 +1,5 @@
-﻿using PEX.CustomerPayment.Presentation.ViewModels;
+﻿using PEX.CustomerPayment.Presentation.Servicios.Sms;
+using PEX.CustomerPayment.Presentation.ViewModels;
 using System;
 using System.Web.Mvc;
 
@@ -15,8 +16,17 @@ namespace PEX.CustomerPayment.Presentation.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ConsultarReferencia(ConsultaReferenciaViewModel model)
         {
-            var solicitudId = model.Register(CargarDatosContext());
-            return RedirectToAction("MostrarDatosSolicitud", new { solicitudId });
+            try
+            {
+                var solicitudId = model.Register(CargarDatosContext());
+                return RedirectToAction("MostrarDatosSolicitud", new { solicitudId });
+            }
+            catch (Exception ex)
+            {
+                PostMessage(HelperKit.Mvc.MessageType.Danger, "No se ha encontrado una operación con el número de referencia ingresado");
+                return View(model);
+            }
+            
         }
 
 
@@ -33,7 +43,7 @@ namespace PEX.CustomerPayment.Presentation.Controllers
         {
             try
             {
-                model.Register(CargarDatosContext());
+                model.Register(CargarDatosContext(), Server.MapPath("~/EmailTemplates"));
                 return Json(new
                 {
                     error = false,
@@ -53,7 +63,45 @@ namespace PEX.CustomerPayment.Presentation.Controllers
 
         public ActionResult FinalizarSolicitud(Guid solicitudId)
         {
+            DatosSoliitudViewModel model = new DatosSoliitudViewModel();
+            model.Fill(CargarDatosContext(), solicitudId);
+            return View(model);
+        }
+
+
+
+        public ActionResult ConsultaSeguimiento(Guid ppst)
+        {
+            return RedirectToAction("MostrarDatosSolicitud", new { solicitudId = ppst });
+        }
+
+        public PartialViewResult _TerminosYCondiciones()
+        {
+            TerminosYCondicionesVIewModel model = new TerminosYCondicionesVIewModel();
+            model.Fill(CargarDatosContext());
+            return PartialView(model);
+        }
+
+
+        public ActionResult NotificarDeposito(Guid solicitudId)
+        {
+            DatosSoliitudViewModel model = new DatosSoliitudViewModel();
+            model.Fill(CargarDatosContext(), solicitudId);
+            model.EndPayment(CargarDatosContext(), Server.MapPath("~/EmailTemplates"));
+            return Json(new
+            {
+                error = false,
+                message = $"SL{model.SolicitudPago.NumeroReferencia}"
+            });
+        }
+
+        public ActionResult Test()
+        {
+            SmsHandler smsHandler = new SmsHandler();
+            smsHandler.SendMessage("Se ha registrado su solicitud. Para ver el estado ingrese a: https://peruexpress.cloud/pagos", "926974280");
+            smsHandler.SendMessage("Se ha registrado su solicitud. Para ver el estado ingrese a: https://peruexpress.cloud/pagos", "984153422");
             return View();
         }
+
     }
 }

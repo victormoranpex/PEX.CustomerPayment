@@ -29,5 +29,6 @@ namespace PEX.CustomerPayment.Presentation.Models.Database.SQL
         public virtual DbSet<EquivalenciaPaises> EquivalenciaPaises { get; set; }
         public virtual DbSet<InformacionCliente> InformacionCliente { get; set; }
         public virtual DbSet<SolicitudPago> SolicitudPago { get; set; }
+        public virtual DbSet<ParametroConfiguracion> ParametroConfiguracion { get; set; }
     }
 }

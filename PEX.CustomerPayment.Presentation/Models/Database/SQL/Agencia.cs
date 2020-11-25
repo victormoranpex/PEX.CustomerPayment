@@ -28,5 +28,6 @@ namespace PEX.CustomerPayment.Presentation.Models.Database.SQL
         public string Grupo { get; set; }
         public string EntidadRecaudo { get; set; }
         public string EntidadSeguimientorecaudo { get; set; }
+        public Nullable<bool> HabilitadoSolicitudPago { get; set; }
     }
 }

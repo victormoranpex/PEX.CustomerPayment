@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -26,6 +27,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +56,9 @@
     </Reference>
     <Reference Include="EntityFramework6.Npgsql, Version=6.4.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework6.Npgsql.6.4.1\lib\net461\EntityFramework6.Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="FoolproofValidation, Version=0.9.5851.39121, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Foolproof.0.9.4518\lib\net45\FoolproofValidation.dll</HintPath>
     </Reference>
     <Reference Include="HelperKit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=9bfe7e6f875104a9, processorArchitecture=MSIL">
       <HintPath>..\packages\HelperKit.1.1.0\lib\net47\HelperKit.dll</HintPath>
@@ -144,6 +149,9 @@
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -248,7 +256,10 @@
     </Compile>
     <Compile Include="Helpers\ConstantHelpers.cs" />
     <Compile Include="Helpers\ExtensionHelper.cs" />
+    <Compile Include="Helpers\HtmlHelpers.cs" />
+    <Compile Include="Helpers\HttpClientExtensions.cs" />
     <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="Logica\EmailSMTPService.cs" />
     <Compile Include="Models\Database\accontrol.cs">
       <DependentUpon>GirosModel.tt</DependentUpon>
     </Compile>
@@ -711,6 +722,9 @@
     <Compile Include="Models\Database\SQL\InformacionCliente.cs">
       <DependentUpon>PexModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Database\SQL\ParametroConfiguracion.cs">
+      <DependentUpon>PexModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Database\SQL\PexModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -823,10 +837,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\Moneygram\Models\ReferenceNumberEntity.cs" />
     <Compile Include="Servicios\Moneygram\ServiceHandler.cs" />
+    <Compile Include="Servicios\Sms\Model\envio.cs" />
+    <Compile Include="Servicios\Sms\Model\SmsResponse.cs" />
+    <Compile Include="Servicios\Sms\SmsHandler.cs" />
     <Compile Include="ViewModels\ConsultaReferenciaViewModel.cs" />
     <Compile Include="ViewModels\DatosSoliitudViewModel.cs" />
     <Compile Include="ViewModels\InformacionPagoViewModel.cs" />
     <Compile Include="ViewModels\JsonEntity.cs" />
+    <Compile Include="ViewModels\TerminosYCondicionesVIewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ReferenceNumerServiceReference\configuration91.svcinfo" />
@@ -835,10 +853,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Client Scripts\mvcfoolproof.unobtrusive.js" />
+    <Content Include="Client Scripts\mvcfoolproof.unobtrusive.min.js" />
+    <Content Include="Client Scripts\MvcFoolproofJQueryValidation.js" />
+    <Content Include="Client Scripts\MvcFoolproofJQueryValidation.min.js" />
+    <Content Include="Client Scripts\MvcFoolproofValidation.js" />
+    <Content Include="Client Scripts\MvcFoolproofValidation.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom-styles.css" />
+    <Content Include="Content\images\Logo-Peruexpress.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\payyed\css\stylesheet.css" />
     <Content Include="Content\payyed\images\anyone-affiliate-marketing.jpg" />
@@ -899,12 +925,20 @@
     <Content Include="Content\payyed\vendor\owl.carousel\assets\owl.carousel.min.css" />
     <Content Include="Content\payyed\vendor\owl.carousel\assets\owl.video.play.png" />
     <Content Include="Content\payyed\vendor\owl.carousel\owl.carousel.min.js" />
+    <Content Include="Content\plugins\ladda\css\demo.css" />
+    <Content Include="Content\plugins\ladda\css\ladda-themeless.min.css" />
+    <Content Include="Content\plugins\ladda\js\ladda.jquery.min.js" />
+    <Content Include="Content\plugins\ladda\js\ladda.js" />
+    <Content Include="Content\plugins\ladda\js\ladda.min.js" />
+    <Content Include="Content\plugins\ladda\js\spin.min.js" />
     <Content Include="Content\plugins\sweetalert\sweetalert2.all.js" />
     <Content Include="Content\plugins\sweetalert\sweetalert2.all.min.js" />
     <Content Include="Content\plugins\sweetalert\sweetalert2.css" />
     <Content Include="Content\plugins\sweetalert\sweetalert2.js" />
     <Content Include="Content\plugins\sweetalert\sweetalert2.min.css" />
     <Content Include="Content\plugins\sweetalert\sweetalert2.min.js" />
+    <Content Include="EmailTemplates\solicitud_pagada.html" />
+    <Content Include="EmailTemplates\solicitud_registrada.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -961,12 +995,16 @@
     <Content Include="Models\Database\SQL\PexModel.edmx.diagram">
       <DependentUpon>PexModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\plugins\ladda\css\ladda-themed.scss" />
+    <Content Include="Content\plugins\ladda\css\ladda.scss" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -1008,6 +1046,9 @@
     <Content Include="Views\Solicitud\MostrarDatosSolicitud.cshtml" />
     <Content Include="Views\Solicitud\ConsultarReferencia.cshtml" />
     <Content Include="Views\Solicitud\FinalizarSolicitud.cshtml" />
+    <Content Include="Views\Solicitud\_TerminosYCondiciones.cshtml" />
+    <Content Include="Views\Shared\_ModalLayout.cshtml" />
+    <Content Include="Views\Solicitud\ConsultaSeguimiento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1027,6 +1068,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -1035,11 +1077,15 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ReferenceNumerServiceReference\" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Content\plugins\ladda\js\ladda.d.ts" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">

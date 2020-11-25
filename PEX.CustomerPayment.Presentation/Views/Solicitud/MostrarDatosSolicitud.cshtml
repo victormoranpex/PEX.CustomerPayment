@@ -23,6 +23,8 @@
                 {
                     @Html.AntiForgeryToken()
                     @Html.HiddenFor(x => Model.SolicitudPagoId)
+                    @Html.HiddenFor(x => Model.SolicitudPago.NumeroReferencia)
+                    @Html.HiddenFor(x => Model.ClienteRegistrado)
                     <!-- Request Money Confirm Details
                     ============================================= -->
                     <h3 class="text-5 font-weight-400 mb-3">Datos de la transacción</h3>
@@ -32,43 +34,205 @@
                     </div>
                     <div class="row">
                         <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">Estado</p>
-                        <p class="col-sm-8">@Model.SolicitudPago.EstadoTransaccion</p>
+                        <p class="col-sm-8"><span class="text-success">@Model.SolicitudPago.EstadoTransaccion</span></p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">País</p>
+                        <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">País origen</p>
                         <p class="col-sm-8">@Model.PaisOrigen</p>
                     </div>
 
-                    if (!Model.ClienteRegistrado)
+                    if (Model.SolicitudPago.EstadoTransaccion != "Disponible")
                     {
-                        <div class="form-group">
-                            @Html.LabelFor(x => Model.TipoDocumento)
-                            @Html.DropDownListFor(x => Model.TipoDocumento, new SelectList(Model.LstTipoDocumeno, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
-                            @Html.ValidationMessageFor(x => Model.TipoDocumento)
+                        <div class="row">
+                            <p class="col-sm-4 text-muted text-sm-right mb-0 mb-sm-3">Estado de la solicitud</p>
+                            <p class="col-sm-8"><span>@HtmlHelpers.GetLabelEstadoSolicitud(Model.SolicitudPago.Estado)</span></p>
                         </div>
+                    }
+                    <hr />
+
+                    if (Model.SolicitudPago.Estado == "INI")
+                    {
+                        if (Model.SolicitudPago.EstadoTransaccion == "Disponible")
+                        {
+                            if (!Model.ClienteRegistrado)
+                            {
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.TipoDocumento)
+                                    @Html.DropDownListFor(x => Model.TipoDocumento, new SelectList(Model.LstTipoDocumeno, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
+                                    @Html.ValidationMessageFor(x => Model.TipoDocumento)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.NumeroDocumento)
+                                    @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", placeholder = "Número de documento de itendidad" })
+                                    @Html.ValidationMessageFor(x => Model.NumeroDocumento)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.Nombres)
+                                    @Html.TextBoxFor(x => Model.Nombres, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.Nombres)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.ApellidoPaterno)
+                                    @Html.TextBoxFor(x => Model.ApellidoPaterno, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.ApellidoPaterno)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.ApellidoMaterno)
+                                    @Html.TextBoxFor(x => Model.ApellidoMaterno, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.ApellidoMaterno)
+                                </div>
+
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.Direccion)
+                                    @Html.TextBoxFor(x => Model.Direccion, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.Direccion)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.NacionalidadId)
+                                    @Html.DropDownListFor(x => Model.NacionalidadId, new SelectList(Model.LstPaises.OrderBy(x => x.Text), "Id", "Text", "PE"), new { @class = "custom-select" })
+                                    @Html.ValidationMessageFor(x => Model.NacionalidadId)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.Ocupacion)
+                                    @Html.DropDownListFor(x => Model.Ocupacion, new SelectList(Model.LstOcupaciones.OrderBy(x => x.Text), "Id", "Text", "PE"), new { @class = "custom-select" })
+                                    @Html.ValidationMessageFor(x => Model.Ocupacion)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.CentroLaboral)
+                                    @Html.TextBoxFor(x => Model.CentroLaboral, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.CentroLaboral)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.Cargo)
+                                    @Html.TextBoxFor(x => Model.Cargo, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.Cargo)
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.FechaNacimiento)
+                                    @Html.TextBoxFor(x => Model.FechaNacimiento, "{0:dd/MM/yyyy}", new { @class = "form-control", @data_mask = "00/00/0000" })
+                                    @Html.ValidationMessageFor(x => Model.FechaNacimiento)
+                                </div>
+
+                            }
+                            else
+                            {
+                                <div class="form-group">
+                                    @Html.LabelFor(x => Model.NumeroDocumento)
+                                    @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(x => Model.NumeroDocumento)
+                                </div>
+                            }
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.CodigoBanco)
+                                @Html.DropDownListFor(x => Model.CodigoBanco, new SelectList(Model.LstBancos, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
+                                @Html.ValidationMessageFor(x => Model.CodigoBanco)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.NumeroCuenta)
+                                @Html.TextBoxFor(x => Model.NumeroCuenta, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.NumeroCuenta)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.NumeroCuentaInterbancario)
+                                @Html.TextBoxFor(x => Model.NumeroCuentaInterbancario, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.NumeroCuentaInterbancario)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.TipoMoneda)
+                                @Html.DropDownListFor(x => Model.TipoMoneda, new SelectList(Model.LstTipoMonedas, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
+                                @Html.ValidationMessageFor(x => Model.TipoMoneda)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.Celular)
+                                @Html.TextBoxFor(x => Model.Celular, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.Celular)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.Correo)
+                                @Html.TextBoxFor(x => Model.Correo, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.Correo)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.OrigenFondos)
+                                @Html.TextBoxFor(x => Model.OrigenFondos, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.OrigenFondos)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.DestinoFondos)
+                                @Html.TextBoxFor(x => Model.DestinoFondos, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.DestinoFondos)
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(x => Model.RelacionRemitente)
+                                @Html.TextBoxFor(x => Model.RelacionRemitente, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => Model.RelacionRemitente)
+                            </div>
+
+
+                            <div class="form-check">
+                                @Html.CheckBoxFor(x => Model.TerminosYCondiciones, new { @class = "form-check-input" })
+                                @Html.LabelFor(x => Model.TerminosYCondiciones, new { @class = "form-check-label" })
+                            </div>
+
+                            <a href="#" @Data.ModalLink("_TerminosYCondiciones")>Términos y condiciones</a>
+
+                            <button type="submit" class="btn btn-primary btn-block ladda-button" data-style="expand-right">Continuar <i class="fa fa-arrow-right"></i></button>
+                        }
+                    }
+
+                    if (Model.SolicitudPago.Estado == "PRO")
+                    {
+                        <p>Su solicitud aún se encuentra en proceso. Puede modificar el banco y número de cuenta si lo desea, así como sus datos de contacto</p>
+
+                        <hr />
 
                         <div class="form-group">
                             @Html.LabelFor(x => Model.NumeroDocumento)
-                            @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", placeholder = "Número de documento de itendidad" })
-                            @Html.ValidationMessageFor(x => Model.NumeroDocumento)
+                            @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", disabled = "disabled" })
+                        </div>
+                        @Html.HiddenFor(x => Model.NumeroDocumento)
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => Model.CodigoBanco)
+                            @Html.DropDownListFor(x => Model.CodigoBanco, new SelectList(Model.LstBancos, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
+                            @Html.ValidationMessageFor(x => Model.CodigoBanco)
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(x => Model.Nombres)
-                            @Html.TextBoxFor(x => Model.Nombres, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => Model.Nombres)
+                            @Html.LabelFor(x => Model.NumeroCuenta)
+                            @Html.TextBoxFor(x => Model.NumeroCuenta, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.NumeroCuenta)
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(x => Model.ApellidoPaterno)
-                            @Html.TextBoxFor(x => Model.ApellidoPaterno, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => Model.ApellidoPaterno)
+                            @Html.LabelFor(x => Model.NumeroCuentaInterbancario)
+                            @Html.TextBoxFor(x => Model.NumeroCuentaInterbancario, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.NumeroCuentaInterbancario)
                         </div>
 
                         <div class="form-group">
-                            @Html.LabelFor(x => Model.ApellidoMaterno)
-                            @Html.TextBoxFor(x => Model.ApellidoMaterno, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => Model.ApellidoMaterno)
+                            @Html.LabelFor(x => Model.Celular)
+                            @Html.TextBoxFor(x => Model.Celular, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => Model.Celular)
                         </div>
 
                         <div class="form-group">
@@ -77,54 +241,15 @@
                             @Html.ValidationMessageFor(x => Model.Correo)
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(x => Model.Direccion)
-                            @Html.TextBoxFor(x => Model.Direccion, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(x => Model.Direccion)
+                        <div class="form-check">
+                            @Html.CheckBoxFor(x => Model.TerminosYCondiciones, new { @class = "form-check-input" })
+                            @Html.LabelFor(x => Model.TerminosYCondiciones, new { @class = "form-check-label" })
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(x => Model.NacionalidadId)
-                            @Html.DropDownListFor(x => Model.NacionalidadId, new SelectList(Model.LstPaises, "Id", "Text", "[-- Seleccione --]"))
-                            @Html.ValidationMessageFor(x => Model.NacionalidadId)
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-block ladda-button" data-style="expand-right">Continuar <i class="fa fa-arrow-right"></i></button>
 
+                        <a href="#" @Data.ModalLink("_TerminosYCondiciones")>Términos y condiciones</a>
                     }
-                    else
-                    {
-                        <div class="form-group">
-                            @Html.LabelFor(x => Model.NumeroDocumento)
-                            @Html.TextBoxFor(x => Model.NumeroDocumento, new { @class = "form-control", disabled = "disabled" })
-                        </div>
-                        @Html.HiddenFor(x => Model.NumeroDocumento)
-                    }
-
-                    <div class="form-group">
-                        @Html.LabelFor(x => Model.CodigoBanco)
-                        @Html.DropDownListFor(x => Model.CodigoBanco, new SelectList(Model.LstBancos, "Id", "Text", "[-- Seleccione --]"), new { @class = "custom-select" })
-                        @Html.ValidationMessageFor(x => Model.CodigoBanco)
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(x => Model.NumeroCuenta)
-                        @Html.TextBoxFor(x => Model.NumeroCuenta, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(x => Model.NumeroCuenta)
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(x => Model.NumeroCuentaInterbancario)
-                        @Html.TextBoxFor(x => Model.NumeroCuentaInterbancario, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(x => Model.NumeroCuentaInterbancario)
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(x => Model.Celular)
-                        @Html.TextBoxFor(x => Model.Celular, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(x => Model.Celular)
-                    </div>
-
-                    <button class="btn btn-primary btn-block ladda-button">Continuar <i class="fa fa-arrow-right"></i></button>
-
                 }
                 <!-- Request Money Confirm Details end -->
             </div>
@@ -142,7 +267,7 @@
 
         function onSuccess(data) {
 
-
+            Ladda.stopAll();
             if (data.error) {
                 Swal.fire({
                     title: 'Error',
