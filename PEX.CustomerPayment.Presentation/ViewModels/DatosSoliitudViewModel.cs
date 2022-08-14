@@ -235,10 +235,10 @@ namespace PEX.CustomerPayment.Presentation.ViewModels
                         usuario = "00",
                         fecha = DateTime.Now,
                         publico = "",
-                        banco = "",
+                        banco = null,
                         excepitf = "",
                         fotfecha = null,
-                        tipocta = "",
+                        tipocta = null,
                     };
                     cargarDatosContext.contextPg.clientes.Add(cliente);
                     cargarDatosContext.contextPg.SaveChanges();
@@ -256,7 +256,16 @@ namespace PEX.CustomerPayment.Presentation.ViewModels
                     string mensajeSms = "Se ha registrado su solicitud. Para ver el estado ingrese a: https://peruexpress.cloud/pagos";
 
                     SmsHandler smsHandler = new SmsHandler();
-                    smsHandler.SendMessage(mensajeSms, Celular);
+                    try
+                    {
+                        smsHandler.SendMessage(mensajeSms, Celular);
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+                    
                 }
             }
             solicitudPago.Estado = "PRO";

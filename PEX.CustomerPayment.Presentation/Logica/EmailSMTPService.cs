@@ -1,12 +1,21 @@
-﻿using HelperKit;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Gmail.v1;
+using Google.Apis.Gmail.v1.Data;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using HelperKit;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Threading;
 using System.Web;
+
+
 
 namespace PEX.CustomerPayment.Presentation.Logica
 {
@@ -38,7 +47,7 @@ namespace PEX.CustomerPayment.Presentation.Logica
                 Credentials = new NetworkCredential(this._emailFrom, this._emailFromPwd),
                 Port = this._port,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                Timeout = 10000,
+                Timeout = 100000,
             };
         }
 
@@ -65,6 +74,7 @@ namespace PEX.CustomerPayment.Presentation.Logica
                 mailMessage.Subject = subject;
                 mailMessage.Body = body;
                 mailMessage.IsBodyHtml = true;
+                
 
                 mailMessage.BodyEncoding = UTF8Encoding.UTF8;
                 mailMessage.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
@@ -73,6 +83,61 @@ namespace PEX.CustomerPayment.Presentation.Logica
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public virtual void SendMessageGmail()
+        {
+            try
+            {
+                UserCredential credential;
+                string[] Scopes = { GmailService.Scope.GmailReadonly };
+                string ApplicationName = "Customer Payment";
+
+                // Load client secrets.smtpemail-353618-029c82de0b1b
+                using (var stream =
+                       new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+                {
+                    /* The file token.json stores the user's access and refresh tokens, and is created
+                     automatically when the authorization flow completes for the first time. */
+                    string credPath = "token.json";
+                    credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                        GoogleClientSecrets.FromStream(stream).Secrets,
+                        Scopes,
+                        "user",
+                        CancellationToken.None,
+                        new FileDataStore(credPath, true)).Result;
+                    Console.WriteLine("Credential file saved to: " + credPath);
+                }
+
+                // Create Gmail API service.
+                var service = new GmailService(new BaseClientService.Initializer
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = ApplicationName
+                });
+
+                // Define parameters of request.
+                UsersResource.LabelsResource.ListRequest request = service.Users.Labels.List("me");
+
+                // List labels.
+                IList<Label> labels = request.Execute().Labels;
+                Console.WriteLine("Labels:");
+                if (labels == null || labels.Count == 0)
+                {
+                    Console.WriteLine("No labels found.");
+                    return;
+                }
+                foreach (var labelItem in labels)
+                {
+                    Console.WriteLine("{0}", labelItem.Name);
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 

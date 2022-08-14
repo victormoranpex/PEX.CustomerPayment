@@ -1,4 +1,5 @@
-﻿using PEX.CustomerPayment.Presentation.Servicios.Sms;
+﻿using PEX.CustomerPayment.Presentation.Logica;
+using PEX.CustomerPayment.Presentation.Servicios.Sms;
 using PEX.CustomerPayment.Presentation.ViewModels;
 using System;
 using System.Web.Mvc;
@@ -100,6 +101,20 @@ namespace PEX.CustomerPayment.Presentation.Controllers
             SmsHandler smsHandler = new SmsHandler();
             smsHandler.SendMessage("Se ha registrado su solicitud. Para ver el estado ingrese a: https://peruexpress.cloud/pagos", "926974280");
             smsHandler.SendMessage("Se ha registrado su solicitud. Para ver el estado ingrese a: https://peruexpress.cloud/pagos", "984153422");
+            return View();
+        }
+
+        public ActionResult SendEmail()
+        {
+            try
+            {
+                EmailSMTPService emailSMTPService = new EmailSMTPService();
+                emailSMTPService.SendSingleEmail("vck1805@gmail.com", "TEST", "TEST");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return View();
         }
 
